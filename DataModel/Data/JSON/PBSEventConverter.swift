@@ -28,6 +28,7 @@ struct PBSEventConverter {
                 
                 let crewLine = CrewLine(context: context)
                 let person = Person(context: context)
+                person.id = UUID(uuidString: personID)
                 person.firstName = pbsPerson.firstName
                 person.lastName = pbsPerson.lastName
                 person.rank = Int16(pbsPerson.rankID)

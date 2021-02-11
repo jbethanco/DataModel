@@ -58,8 +58,8 @@
 		BFCE9AF825D36E0A001E723F /* SortieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9AF725D36E0A001E723F /* SortieTests.swift */; };
 		BFCE9B0325D37348001E723F /* Sortie+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9B0225D37348001E723F /* Sortie+Comparable.swift */; };
 		BFCE9B0825D37794001E723F /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9B0725D37794001E723F /* Date+Ext.swift */; };
-		BFF90E6025D4B279000351E2 /* Sortie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E5C25D4B279000351E2 /* Sortie+CoreDataClass.swift */; };
-		BFF90E6125D4B279000351E2 /* Sortie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E5D25D4B279000351E2 /* Sortie+CoreDataProperties.swift */; };
+		BFD8F29C25D5DAB40076F4BD /* Sortie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8F29A25D5DAB40076F4BD /* Sortie+CoreDataClass.swift */; };
+		BFD8F29D25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8F29B25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift */; };
 		BFF90E6C25D4B334000351E2 /* CrewLine+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E6A25D4B334000351E2 /* CrewLine+CoreDataClass.swift */; };
 		BFF90E6D25D4B334000351E2 /* CrewLine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E6B25D4B334000351E2 /* CrewLine+CoreDataProperties.swift */; };
 		BFF90E7D25D4B64B000351E2 /* CoordinatedDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E7C25D4B64B000351E2 /* CoordinatedDatePicker.swift */; };
@@ -141,8 +141,8 @@
 		BFCE9AF725D36E0A001E723F /* SortieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortieTests.swift; sourceTree = "<group>"; };
 		BFCE9B0225D37348001E723F /* Sortie+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+Comparable.swift"; sourceTree = "<group>"; };
 		BFCE9B0725D37794001E723F /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
-		BFF90E5C25D4B279000351E2 /* Sortie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BFF90E5D25D4B279000351E2 /* Sortie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFD8F29A25D5DAB40076F4BD /* Sortie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFD8F29B25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BFF90E6A25D4B334000351E2 /* CrewLine+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrewLine+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BFF90E6B25D4B334000351E2 /* CrewLine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrewLine+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BFF90E7C25D4B64B000351E2 /* CoordinatedDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedDatePicker.swift; sourceTree = "<group>"; };
@@ -272,8 +272,6 @@
 			children = (
 				BFF90E6A25D4B334000351E2 /* CrewLine+CoreDataClass.swift */,
 				BFF90E6B25D4B334000351E2 /* CrewLine+CoreDataProperties.swift */,
-				BFF90E5C25D4B279000351E2 /* Sortie+CoreDataClass.swift */,
-				BFF90E5D25D4B279000351E2 /* Sortie+CoreDataProperties.swift */,
 				BF630C6025D293420095D459 /* EventRecord+CoreDataClass.swift */,
 				BF630C6125D293420095D459 /* EventRecord+CoreDataProperties.swift */,
 				BF630C6A25D293430095D459 /* FlightConditions+CoreDataClass.swift */,
@@ -290,6 +288,8 @@
 				BF630C7125D293430095D459 /* MissionEventTypes+CoreDataProperties.swift */,
 				BF630C6425D293420095D459 /* Person+CoreDataClass.swift */,
 				BF630C6525D293420095D459 /* Person+CoreDataProperties.swift */,
+				BFD8F29A25D5DAB40076F4BD /* Sortie+CoreDataClass.swift */,
+				BFD8F29B25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift */,
 				BF630C6E25D293430095D459 /* SortieType+CoreDataClass.swift */,
 				BF630C6F25D293430095D459 /* SortieType+CoreDataProperties.swift */,
 			);
@@ -503,16 +503,15 @@
 				BFCE9B0325D37348001E723F /* Sortie+Comparable.swift in Sources */,
 				BF630C8125D293430095D459 /* FlightConditions+CoreDataProperties.swift in Sources */,
 				BF630BE525D27D580095D459 /* Person+Accessors.swift in Sources */,
-				BFF90E6125D4B279000351E2 /* Sortie+CoreDataProperties.swift in Sources */,
 				BF630C7725D293430095D459 /* EventRecord+CoreDataProperties.swift in Sources */,
 				BF630BF825D28A000095D459 /* CrewLine+Accessors.swift in Sources */,
+				BFD8F29C25D5DAB40076F4BD /* Sortie+CoreDataClass.swift in Sources */,
 				BF630BE625D27D580095D459 /* SortieType+Accessors.swift in Sources */,
 				BFB8F71F25D4838A003808A8 /* PBSEventConverter.swift in Sources */,
 				BFF90E8825D4DE45000351E2 /* NilDatePicker.swift in Sources */,
 				BF630C7A25D293430095D459 /* Person+CoreDataClass.swift in Sources */,
 				BFB8F72425D48503003808A8 /* MockJSON.swift in Sources */,
 				BFB8F73125D49C05003808A8 /* PersonCoder.swift in Sources */,
-				BFF90E6025D4B279000351E2 /* Sortie+CoreDataClass.swift in Sources */,
 				BF630BE925D27D580095D459 /* Sortie+Accessors.swift in Sources */,
 				BF630C7B25D293430095D459 /* Person+CoreDataProperties.swift in Sources */,
 				BF630C8825D293430095D459 /* FlightTime+CoreDataClass.swift in Sources */,
@@ -528,6 +527,7 @@
 				BF630C4E25D291C60095D459 /* PBLogging.xcdatamodeld in Sources */,
 				BF630C7625D293430095D459 /* EventRecord+CoreDataClass.swift in Sources */,
 				BFCE9AEE25D359E0001E723F /* CrewLine+Comparable.swift in Sources */,
+				BFD8F29D25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift in Sources */,
 				BFF90E6D25D4B334000351E2 /* CrewLine+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  Sortie+CoreDataProperties.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/10/21.
+//  Created by John Bethancourt on 2/11/21.
 //
 //
 
@@ -28,7 +28,7 @@ extension Sortie {
     @NSManaged public var numLoadmastersRequired: Int16
     @NSManaged public var numTouchAndGoes: Int16
     @NSManaged public var serialNumber_: String?
-    @NSManaged public var specialUse: String?
+    @NSManaged public var specialUse_: String?
     @NSManaged public var takeoffCenterOfGravity: Float
     @NSManaged public var takeoffICAO_: String?
     @NSManaged public var takeoffTime: Date?

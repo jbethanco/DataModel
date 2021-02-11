@@ -38,6 +38,10 @@ extension Sortie{
         set { serialNumber_ = newValue }
     }
     
+    public var specialUse: String {
+        get { return specialUse_ ?? "" }
+        set { specialUse_ = newValue }
+    }
     public var harmLocation: String {
         get { return harmLocation_ ?? "" }
         set { harmLocation_ = newValue }

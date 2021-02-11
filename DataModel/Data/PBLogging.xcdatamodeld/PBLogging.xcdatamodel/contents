@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CrewLine" representedClassName="CrewLine" syncable="YES">
         <attribute name="flightAuthDutyCode_" optional="YES" attributeType="String"/>
         <attribute name="flyingOrganization_" optional="YES" attributeType="String"/>
@@ -89,7 +89,7 @@
         <attribute name="numLoadmastersRequired" optional="YES" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
         <attribute name="numTouchAndGoes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="serialNumber_" optional="YES" attributeType="String"/>
-        <attribute name="specialUse" optional="YES" attributeType="String"/>
+        <attribute name="specialUse_" optional="YES" attributeType="String"/>
         <attribute name="takeoffCenterOfGravity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="takeoffICAO_" optional="YES" attributeType="String"/>
         <attribute name="takeoffTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -118,16 +118,16 @@
         <relationship name="sortie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sortie" inverseName="sortieType" inverseEntity="Sortie"/>
     </entity>
     <elements>
-        <element name="CrewLine" positionX="-1005.34375" positionY="-789.57421875" width="128" height="164"/>
-        <element name="EventRecord" positionX="-827.97314453125" positionY="-868.6082153320312" width="128" height="89"/>
-        <element name="FlightConditions" positionX="-538.93359375" positionY="-608.96875" width="128" height="134"/>
-        <element name="FlightTime" positionX="-570.45703125" positionY="-433.125" width="128" height="134"/>
-        <element name="Fuel" positionX="-1010.92578125" positionY="-612.90625" width="128" height="89"/>
-        <element name="Metrics" positionX="-875.0859375" positionY="-640.03125" width="128" height="164"/>
-        <element name="Mission" positionX="-1389.828125" positionY="-633.33203125" width="128" height="89"/>
-        <element name="MissionEventTypes" positionX="-600.417236328125" positionY="-850.9834899902344" width="128" height="104"/>
-        <element name="Person" positionX="160" positionY="192" width="128" height="164"/>
-        <element name="Sortie" positionX="-1226.5546875" positionY="-699.80078125" width="128" height="359"/>
-        <element name="SortieType" positionX="-1016.61328125" positionY="-455.51171875" width="128" height="254"/>
+        <element name="CrewLine" positionX="-320.46484375" positionY="-296.37109375" width="128" height="178"/>
+        <element name="EventRecord" positionX="-139.05078125" positionY="-338.96875" width="128" height="103"/>
+        <element name="FlightConditions" positionX="-88.96484375" positionY="-220.03515625" width="128" height="148"/>
+        <element name="FlightTime" positionX="-110.95703125" positionY="-42.1640625" width="128" height="148"/>
+        <element name="Fuel" positionX="-319.17578125" positionY="-106.953125" width="128" height="103"/>
+        <element name="Metrics" positionX="-321.7890625" positionY="8.86328125" width="128" height="178"/>
+        <element name="Mission" positionX="-659.69140625" positionY="-291.171875" width="128" height="103"/>
+        <element name="MissionEventTypes" positionX="33.12890625" positionY="-353.85546875" width="128" height="118"/>
+        <element name="Person" positionX="-137.01953125" positionY="128.109375" width="128" height="178"/>
+        <element name="Sortie" positionX="-495.23828125" positionY="-332.03515625" width="128" height="373"/>
+        <element name="SortieType" positionX="-660.81640625" positionY="-168.41015625" width="128" height="268"/>
     </elements>
 </model>

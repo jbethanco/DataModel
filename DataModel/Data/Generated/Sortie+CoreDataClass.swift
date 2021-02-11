@@ -2,7 +2,7 @@
 //  Sortie+CoreDataClass.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/10/21.
+//  Created by John Bethancourt on 2/11/21.
 //
 //
 
