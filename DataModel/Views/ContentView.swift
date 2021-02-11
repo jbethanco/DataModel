@@ -15,7 +15,7 @@ struct ContentView: View {
     @FetchRequest(
         entity: Mission.entity(),
         sortDescriptors: [],
-        //sortDescriptors: [NSSortDescriptor(keyPath: \Mission.sorties.first?.takeoffTime, ascending: true)],
+ 
         animation: .default)
     
     private var missions: FetchedResults<Mission>
@@ -25,24 +25,31 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationView {
-            List{
-                ForEach(missions, content: MissionNavigationLink.init)
+        VStack{
+            Text("Shake Device for fake data generation. (Or Command+Ctrl+Z in simulator.)").font(.caption).foregroundColor(.gray)
+            
+            NavigationView {
+                List{
+                    ForEach(missions, content: MissionNavigationLink.init)
+                }
+                .navigationBarTitle("Missions")
+                .navigationBarItems(leading: fetchMissionsButton, trailing: addMissionButton)
             }
-            .navigationBarTitle("Missions")
-            .navigationBarItems(leading: fetchMissionsButton, trailing: addMissionButton)
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .sheet(isPresented: $showDownloadEventsModal) {
-            EventDownloaderView(isShown: $showDownloadEventsModal)
-        }
-        .pblModal(isPresented: $showNewMissionFormModal){
-            AddNewMissionFormView(){
-                withAnimation {
-                    showNewMissionFormModal = false
+            .navigationViewStyle(StackNavigationViewStyle())
+            .sheet(isPresented: $showDownloadEventsModal) {
+                EventDownloaderView(isShown: $showDownloadEventsModal)
+            }
+            .pblModal(isPresented: $showNewMissionFormModal){
+                AddNewMissionFormView(){
+                    withAnimation {
+                        showNewMissionFormModal = false
+                    }
                 }
             }
         }
+        
+        
+       
     }
     
     var fetchMissionsButton: some View {
