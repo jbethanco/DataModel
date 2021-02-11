@@ -700,8 +700,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DataModel/Preview Content\"";
+				DEVELOPMENT_TEAM = 4W9F335W5Y;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DataModel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -720,8 +722,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"DataModel/Preview Content\"";
+				DEVELOPMENT_TEAM = 4W9F335W5Y;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DataModel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
