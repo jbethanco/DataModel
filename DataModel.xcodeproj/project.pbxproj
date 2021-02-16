@@ -7,48 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF153D8325DB929400220150 /* EventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF153D8225DB929400220150 /* EventTest.swift */; };
 		BF3A865325D1C9D500FD3DB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A865225D1C9D500FD3DB9 /* AppDelegate.swift */; };
 		BF3A865525D1C9D500FD3DB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A865425D1C9D500FD3DB9 /* SceneDelegate.swift */; };
-		BF3A865725D1C9D500FD3DB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A865625D1C9D500FD3DB9 /* ContentView.swift */; };
+		BF3A865725D1C9D500FD3DB9 /* EventsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A865625D1C9D500FD3DB9 /* EventsOverview.swift */; };
 		BF3A865C25D1C9D700FD3DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3A865B25D1C9D700FD3DB9 /* Assets.xcassets */; };
 		BF3A865F25D1C9D700FD3DB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF3A865E25D1C9D700FD3DB9 /* Preview Assets.xcassets */; };
 		BF3A866225D1C9D700FD3DB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF3A866025D1C9D700FD3DB9 /* LaunchScreen.storyboard */; };
 		BF3A866D25D1C9D700FD3DB9 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A866C25D1C9D700FD3DB9 /* DataModelTests.swift */; };
 		BF3A867825D1C9D700FD3DB9 /* DataModelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A867725D1C9D700FD3DB9 /* DataModelUITests.swift */; };
-		BF630B9825D27C390095D459 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630B9325D27C390095D459 /* MockData.swift */; };
-		BF630B9A25D27C390095D459 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630B9725D27C390095D459 /* Persistence.swift */; };
+		BF630B9825D27C390095D459 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630B9325D27C390095D459 /* SampleData.swift */; };
+		BF630B9A25D27C390095D459 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630B9725D27C390095D459 /* DataController.swift */; };
 		BF630BE525D27D580095D459 /* Person+Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630BDF25D27D580095D459 /* Person+Accessors.swift */; };
 		BF630BE625D27D580095D459 /* SortieType+Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630BE025D27D580095D459 /* SortieType+Accessors.swift */; };
 		BF630BE725D27D580095D459 /* Sortie+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630BE125D27D580095D459 /* Sortie+Calculations.swift */; };
 		BF630BE825D27D580095D459 /* AllAwakeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630BE225D27D580095D459 /* AllAwakeExtensions.swift */; };
 		BF630BE925D27D580095D459 /* Sortie+Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630BE325D27D580095D459 /* Sortie+Accessors.swift */; };
-		BF630BEA25D27D580095D459 /* Mission+Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630BE425D27D580095D459 /* Mission+Accessors.swift */; };
+		BF630BEA25D27D580095D459 /* Event+Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630BE425D27D580095D459 /* Event+Accessors.swift */; };
 		BF630BF825D28A000095D459 /* CrewLine+Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630BF725D28A000095D459 /* CrewLine+Accessors.swift */; };
-		BF630C4E25D291C60095D459 /* PBLogging.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF630C4C25D291C60095D459 /* PBLogging.xcdatamodeld */; };
-		BF630C7425D293430095D459 /* Metrics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C5E25D293420095D459 /* Metrics+CoreDataClass.swift */; };
-		BF630C7525D293430095D459 /* Metrics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C5F25D293420095D459 /* Metrics+CoreDataProperties.swift */; };
-		BF630C7625D293430095D459 /* EventRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6025D293420095D459 /* EventRecord+CoreDataClass.swift */; };
-		BF630C7725D293430095D459 /* EventRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6125D293420095D459 /* EventRecord+CoreDataProperties.swift */; };
-		BF630C7825D293430095D459 /* Fuel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6225D293420095D459 /* Fuel+CoreDataClass.swift */; };
-		BF630C7925D293430095D459 /* Fuel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6325D293420095D459 /* Fuel+CoreDataProperties.swift */; };
-		BF630C7A25D293430095D459 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6425D293420095D459 /* Person+CoreDataClass.swift */; };
-		BF630C7B25D293430095D459 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6525D293420095D459 /* Person+CoreDataProperties.swift */; };
-		BF630C7E25D293430095D459 /* Mission+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6825D293430095D459 /* Mission+CoreDataClass.swift */; };
-		BF630C7F25D293430095D459 /* Mission+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6925D293430095D459 /* Mission+CoreDataProperties.swift */; };
-		BF630C8025D293430095D459 /* FlightConditions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6A25D293430095D459 /* FlightConditions+CoreDataClass.swift */; };
-		BF630C8125D293430095D459 /* FlightConditions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6B25D293430095D459 /* FlightConditions+CoreDataProperties.swift */; };
-		BF630C8425D293430095D459 /* SortieType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6E25D293430095D459 /* SortieType+CoreDataClass.swift */; };
-		BF630C8525D293430095D459 /* SortieType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C6F25D293430095D459 /* SortieType+CoreDataProperties.swift */; };
-		BF630C8625D293430095D459 /* MissionEventTypes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C7025D293430095D459 /* MissionEventTypes+CoreDataClass.swift */; };
-		BF630C8725D293430095D459 /* MissionEventTypes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C7125D293430095D459 /* MissionEventTypes+CoreDataProperties.swift */; };
-		BF630C8825D293430095D459 /* FlightTime+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C7225D293430095D459 /* FlightTime+CoreDataClass.swift */; };
-		BF630C8925D293430095D459 /* FlightTime+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF630C7325D293430095D459 /* FlightTime+CoreDataProperties.swift */; };
+		BFB0371E25DB02D70005B5A0 /* TestDataUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0371D25DB02D70005B5A0 /* TestDataUI.swift */; };
 		BFB8F71425D45BC7003808A8 /* SplitTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F71325D45BC7003808A8 /* SplitTimeView.swift */; };
 		BFB8F71F25D4838A003808A8 /* PBSEventConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F71E25D4838A003808A8 /* PBSEventConverter.swift */; };
 		BFB8F72425D48503003808A8 /* MockJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F72325D48503003808A8 /* MockJSON.swift */; };
 		BFB8F72C25D4971E003808A8 /* EventCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F72B25D4971E003808A8 /* EventCoder.swift */; };
 		BFB8F73125D49C05003808A8 /* PersonCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F73025D49C05003808A8 /* PersonCoder.swift */; };
-		BFCE9AC725D31BCE001E723F /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9AC625D31BCE001E723F /* MissionView.swift */; };
+		BFBDF8A625DB1234004DB4AB /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF02B90B25DB0CB600725F4A /* DataModel.xcdatamodeld */; };
+		BFBE497F25DB1A4900989673 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE497E25DB1A4900989673 /* ContentView.swift */; };
+		BFBE49A225DB2CA300989673 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE498C25DB2CA300989673 /* Person+CoreDataClass.swift */; };
+		BFBE49A325DB2CA300989673 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE498D25DB2CA300989673 /* Person+CoreDataProperties.swift */; };
+		BFBE49A425DB2CA300989673 /* Metrics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE498E25DB2CA300989673 /* Metrics+CoreDataClass.swift */; };
+		BFBE49A525DB2CA300989673 /* Metrics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE498F25DB2CA300989673 /* Metrics+CoreDataProperties.swift */; };
+		BFBE49A625DB2CA300989673 /* CrewLine+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499025DB2CA300989673 /* CrewLine+CoreDataClass.swift */; };
+		BFBE49A725DB2CA300989673 /* CrewLine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499125DB2CA300989673 /* CrewLine+CoreDataProperties.swift */; };
+		BFBE49A825DB2CA300989673 /* Fuel+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499225DB2CA300989673 /* Fuel+CoreDataClass.swift */; };
+		BFBE49A925DB2CA300989673 /* Fuel+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499325DB2CA300989673 /* Fuel+CoreDataProperties.swift */; };
+		BFBE49AA25DB2CA300989673 /* Sortie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499425DB2CA300989673 /* Sortie+CoreDataClass.swift */; };
+		BFBE49AB25DB2CA300989673 /* Sortie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499525DB2CA300989673 /* Sortie+CoreDataProperties.swift */; };
+		BFBE49AC25DB2CA300989673 /* FlightConditions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499625DB2CA300989673 /* FlightConditions+CoreDataClass.swift */; };
+		BFBE49AD25DB2CA300989673 /* FlightConditions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499725DB2CA300989673 /* FlightConditions+CoreDataProperties.swift */; };
+		BFBE49AE25DB2CA300989673 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499825DB2CA300989673 /* Event+CoreDataClass.swift */; };
+		BFBE49AF25DB2CA300989673 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499925DB2CA300989673 /* Event+CoreDataProperties.swift */; };
+		BFBE49B025DB2CA300989673 /* MissionEventTypes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499A25DB2CA300989673 /* MissionEventTypes+CoreDataClass.swift */; };
+		BFBE49B125DB2CA300989673 /* MissionEventTypes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499B25DB2CA300989673 /* MissionEventTypes+CoreDataProperties.swift */; };
+		BFBE49B225DB2CA300989673 /* FlightTime+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499C25DB2CA300989673 /* FlightTime+CoreDataClass.swift */; };
+		BFBE49B325DB2CA300989673 /* FlightTime+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499D25DB2CA300989673 /* FlightTime+CoreDataProperties.swift */; };
+		BFBE49B425DB2CA300989673 /* EventRecord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499E25DB2CA300989673 /* EventRecord+CoreDataClass.swift */; };
+		BFBE49B525DB2CA300989673 /* EventRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE499F25DB2CA300989673 /* EventRecord+CoreDataProperties.swift */; };
+		BFBE49B625DB2CA300989673 /* SortieType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE49A025DB2CA300989673 /* SortieType+CoreDataClass.swift */; };
+		BFBE49B725DB2CA300989673 /* SortieType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE49A125DB2CA300989673 /* SortieType+CoreDataProperties.swift */; };
+		BFBE49BF25DB45D900989673 /* Binding+OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE49BE25DB45D900989673 /* Binding+OnChange.swift */; };
+		BFBE49C525DB4A1400989673 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE49C425DB4A1400989673 /* ContentView2.swift */; };
+		BFBE49CA25DB5DEB00989673 /* EventSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBE49C925DB5DEB00989673 /* EventSplitView.swift */; };
+		BFCE9AC725D31BCE001E723F /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9AC625D31BCE001E723F /* EventView.swift */; };
 		BFCE9ACC25D31BD8001E723F /* SortieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9ACB25D31BD8001E723F /* SortieView.swift */; };
 		BFCE9AD125D32394001E723F /* CrewLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9AD025D32393001E723F /* CrewLineView.swift */; };
 		BFCE9AE025D348E3001E723F /* PBLModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9ADF25D348E3001E723F /* PBLModal.swift */; };
@@ -58,13 +68,9 @@
 		BFCE9AF825D36E0A001E723F /* SortieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9AF725D36E0A001E723F /* SortieTests.swift */; };
 		BFCE9B0325D37348001E723F /* Sortie+Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9B0225D37348001E723F /* Sortie+Comparable.swift */; };
 		BFCE9B0825D37794001E723F /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCE9B0725D37794001E723F /* Date+Ext.swift */; };
-		BFD8F29C25D5DAB40076F4BD /* Sortie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8F29A25D5DAB40076F4BD /* Sortie+CoreDataClass.swift */; };
-		BFD8F29D25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD8F29B25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift */; };
-		BFF90E6C25D4B334000351E2 /* CrewLine+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E6A25D4B334000351E2 /* CrewLine+CoreDataClass.swift */; };
-		BFF90E6D25D4B334000351E2 /* CrewLine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E6B25D4B334000351E2 /* CrewLine+CoreDataProperties.swift */; };
 		BFF90E7D25D4B64B000351E2 /* CoordinatedDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E7C25D4B64B000351E2 /* CoordinatedDatePicker.swift */; };
 		BFF90E8825D4DE45000351E2 /* NilDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF90E8725D4DE45000351E2 /* NilDatePicker.swift */; };
-		BFFE3CD825D3B56000469EBA /* Mission+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFE3CD725D3B56000469EBA /* Mission+Calculations.swift */; };
+		BFFE3CD825D3B56000469EBA /* Event+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFE3CD725D3B56000469EBA /* Event+Calculations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,10 +91,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF02B90C25DB0CB600725F4A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		BF153D8225DB929400220150 /* EventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTest.swift; sourceTree = "<group>"; };
 		BF3A864F25D1C9D500FD3DB9 /* DataModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3A865225D1C9D500FD3DB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF3A865425D1C9D500FD3DB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BF3A865625D1C9D500FD3DB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BF3A865625D1C9D500FD3DB9 /* EventsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsOverview.swift; sourceTree = "<group>"; };
 		BF3A865B25D1C9D700FD3DB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF3A865E25D1C9D700FD3DB9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BF3A866125D1C9D700FD3DB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,40 +106,49 @@
 		BF3A866E25D1C9D700FD3DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF3A867325D1C9D700FD3DB9 /* DataModelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataModelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3A867725D1C9D700FD3DB9 /* DataModelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelUITests.swift; sourceTree = "<group>"; };
-		BF630B9325D27C390095D459 /* MockData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		BF630B9725D27C390095D459 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		BF630B9325D27C390095D459 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		BF630B9725D27C390095D459 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BF630BDF25D27D580095D459 /* Person+Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+Accessors.swift"; sourceTree = "<group>"; };
 		BF630BE025D27D580095D459 /* SortieType+Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SortieType+Accessors.swift"; sourceTree = "<group>"; };
 		BF630BE125D27D580095D459 /* Sortie+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sortie+Calculations.swift"; sourceTree = "<group>"; };
 		BF630BE225D27D580095D459 /* AllAwakeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllAwakeExtensions.swift; sourceTree = "<group>"; };
 		BF630BE325D27D580095D459 /* Sortie+Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sortie+Accessors.swift"; sourceTree = "<group>"; };
-		BF630BE425D27D580095D459 /* Mission+Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mission+Accessors.swift"; sourceTree = "<group>"; };
+		BF630BE425D27D580095D459 /* Event+Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+Accessors.swift"; sourceTree = "<group>"; };
 		BF630BF725D28A000095D459 /* CrewLine+Accessors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrewLine+Accessors.swift"; sourceTree = "<group>"; };
-		BF630C4D25D291C60095D459 /* PBLogging.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PBLogging.xcdatamodel; sourceTree = "<group>"; };
-		BF630C5E25D293420095D459 /* Metrics+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Metrics+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C5F25D293420095D459 /* Metrics+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Metrics+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF630C6025D293420095D459 /* EventRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C6125D293420095D459 /* EventRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF630C6225D293420095D459 /* Fuel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fuel+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C6325D293420095D459 /* Fuel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fuel+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF630C6425D293420095D459 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C6525D293420095D459 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF630C6825D293430095D459 /* Mission+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mission+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C6925D293430095D459 /* Mission+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mission+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF630C6A25D293430095D459 /* FlightConditions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightConditions+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C6B25D293430095D459 /* FlightConditions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightConditions+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF630C6E25D293430095D459 /* SortieType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortieType+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C6F25D293430095D459 /* SortieType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortieType+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF630C7025D293430095D459 /* MissionEventTypes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionEventTypes+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C7125D293430095D459 /* MissionEventTypes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionEventTypes+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BF630C7225D293430095D459 /* FlightTime+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightTime+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BF630C7325D293430095D459 /* FlightTime+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightTime+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BF946A2125DA6C6000A14496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = DataModelTests/Info.plist; sourceTree = SOURCE_ROOT; };
+		BFB0371D25DB02D70005B5A0 /* TestDataUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataUI.swift; sourceTree = "<group>"; };
 		BFB8F71325D45BC7003808A8 /* SplitTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTimeView.swift; sourceTree = "<group>"; };
 		BFB8F71E25D4838A003808A8 /* PBSEventConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBSEventConverter.swift; sourceTree = "<group>"; };
 		BFB8F72325D48503003808A8 /* MockJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSON.swift; sourceTree = "<group>"; };
 		BFB8F72B25D4971E003808A8 /* EventCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCoder.swift; sourceTree = "<group>"; };
 		BFB8F73025D49C05003808A8 /* PersonCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCoder.swift; sourceTree = "<group>"; };
-		BFCE9AC625D31BCE001E723F /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		BFBE497E25DB1A4900989673 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BFBE498C25DB2CA300989673 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE498D25DB2CA300989673 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE498E25DB2CA300989673 /* Metrics+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Metrics+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE498F25DB2CA300989673 /* Metrics+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Metrics+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE499025DB2CA300989673 /* CrewLine+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrewLine+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE499125DB2CA300989673 /* CrewLine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrewLine+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE499225DB2CA300989673 /* Fuel+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fuel+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE499325DB2CA300989673 /* Fuel+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fuel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE499425DB2CA300989673 /* Sortie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE499525DB2CA300989673 /* Sortie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE499625DB2CA300989673 /* FlightConditions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightConditions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE499725DB2CA300989673 /* FlightConditions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightConditions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE499825DB2CA300989673 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE499925DB2CA300989673 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE499A25DB2CA300989673 /* MissionEventTypes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionEventTypes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE499B25DB2CA300989673 /* MissionEventTypes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MissionEventTypes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE499C25DB2CA300989673 /* FlightTime+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightTime+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE499D25DB2CA300989673 /* FlightTime+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightTime+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE499E25DB2CA300989673 /* EventRecord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventRecord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE499F25DB2CA300989673 /* EventRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE49A025DB2CA300989673 /* SortieType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortieType+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BFBE49A125DB2CA300989673 /* SortieType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortieType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BFBE49BE25DB45D900989673 /* Binding+OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+OnChange.swift"; sourceTree = "<group>"; };
+		BFBE49C425DB4A1400989673 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		BFBE49C925DB5DEB00989673 /* EventSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSplitView.swift; sourceTree = "<group>"; };
+		BFCE9AC625D31BCE001E723F /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		BFCE9ACB25D31BD8001E723F /* SortieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortieView.swift; sourceTree = "<group>"; };
 		BFCE9AD025D32393001E723F /* CrewLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewLineView.swift; sourceTree = "<group>"; };
 		BFCE9ADF25D348E3001E723F /* PBLModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBLModal.swift; sourceTree = "<group>"; };
@@ -141,13 +158,9 @@
 		BFCE9AF725D36E0A001E723F /* SortieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortieTests.swift; sourceTree = "<group>"; };
 		BFCE9B0225D37348001E723F /* Sortie+Comparable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+Comparable.swift"; sourceTree = "<group>"; };
 		BFCE9B0725D37794001E723F /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
-		BFD8F29A25D5DAB40076F4BD /* Sortie+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BFD8F29B25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sortie+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BFF90E6A25D4B334000351E2 /* CrewLine+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrewLine+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BFF90E6B25D4B334000351E2 /* CrewLine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrewLine+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BFF90E7C25D4B64B000351E2 /* CoordinatedDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedDatePicker.swift; sourceTree = "<group>"; };
 		BFF90E8725D4DE45000351E2 /* NilDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NilDatePicker.swift; sourceTree = "<group>"; };
-		BFFE3CD725D3B56000469EBA /* Mission+Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mission+Calculations.swift"; sourceTree = "<group>"; };
+		BFFE3CD725D3B56000469EBA /* Event+Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+Calculations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +188,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF02B90625DB0B1000725F4A /* GeneratedToPreventFalseErrors */ = {
+			isa = PBXGroup;
+			children = (
+				BFBE498C25DB2CA300989673 /* Person+CoreDataClass.swift */,
+				BFBE498D25DB2CA300989673 /* Person+CoreDataProperties.swift */,
+				BFBE498E25DB2CA300989673 /* Metrics+CoreDataClass.swift */,
+				BFBE498F25DB2CA300989673 /* Metrics+CoreDataProperties.swift */,
+				BFBE499025DB2CA300989673 /* CrewLine+CoreDataClass.swift */,
+				BFBE499125DB2CA300989673 /* CrewLine+CoreDataProperties.swift */,
+				BFBE499225DB2CA300989673 /* Fuel+CoreDataClass.swift */,
+				BFBE499325DB2CA300989673 /* Fuel+CoreDataProperties.swift */,
+				BFBE499425DB2CA300989673 /* Sortie+CoreDataClass.swift */,
+				BFBE499525DB2CA300989673 /* Sortie+CoreDataProperties.swift */,
+				BFBE499625DB2CA300989673 /* FlightConditions+CoreDataClass.swift */,
+				BFBE499725DB2CA300989673 /* FlightConditions+CoreDataProperties.swift */,
+				BFBE499825DB2CA300989673 /* Event+CoreDataClass.swift */,
+				BFBE499925DB2CA300989673 /* Event+CoreDataProperties.swift */,
+				BFBE499A25DB2CA300989673 /* MissionEventTypes+CoreDataClass.swift */,
+				BFBE499B25DB2CA300989673 /* MissionEventTypes+CoreDataProperties.swift */,
+				BFBE499C25DB2CA300989673 /* FlightTime+CoreDataClass.swift */,
+				BFBE499D25DB2CA300989673 /* FlightTime+CoreDataProperties.swift */,
+				BFBE499E25DB2CA300989673 /* EventRecord+CoreDataClass.swift */,
+				BFBE499F25DB2CA300989673 /* EventRecord+CoreDataProperties.swift */,
+				BFBE49A025DB2CA300989673 /* SortieType+CoreDataClass.swift */,
+				BFBE49A125DB2CA300989673 /* SortieType+CoreDataProperties.swift */,
+			);
+			path = GeneratedToPreventFalseErrors;
+			sourceTree = "<group>";
+		};
 		BF3A864625D1C9D500FD3DB9 = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +245,7 @@
 				BFF90E7B25D4B629000351E2 /* Controls */,
 				BF630B9025D27C180095D459 /* Data */,
 				BFFE3CDD25D44FD800469EBA /* Extensions */,
+				BFBE49C325DB49E800989673 /* UIExperiment */,
 				BFFE3CDC25D44FC400469EBA /* Views */,
 				BF3A865D25D1C9D700FD3DB9 /* Preview Content */,
 				BF3A865B25D1C9D700FD3DB9 /* Assets.xcassets */,
@@ -225,6 +268,7 @@
 				BF3A866E25D1C9D700FD3DB9 /* Info.plist */,
 				BFCE9AF225D360EF001E723F /* CrewLineTests.swift */,
 				BFCE9AF725D36E0A001E723F /* SortieTests.swift */,
+				BF153D8225DB929400220150 /* EventTest.swift */,
 			);
 			path = DataModelTests;
 			sourceTree = "<group>";
@@ -232,6 +276,7 @@
 		BF3A867625D1C9D700FD3DB9 /* DataModelUITests */ = {
 			isa = PBXGroup;
 			children = (
+				BF946A2125DA6C6000A14496 /* Info.plist */,
 				BF3A867725D1C9D700FD3DB9 /* DataModelUITests.swift */,
 			);
 			path = DataModelUITests;
@@ -240,60 +285,40 @@
 		BF630B9025D27C180095D459 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				BF02B90625DB0B1000725F4A /* GeneratedToPreventFalseErrors */,
 				BFF90E5525D4AF9E000351E2 /* JSON */,
-				BF630B9325D27C390095D459 /* MockData.swift */,
-				BF630C4C25D291C60095D459 /* PBLogging.xcdatamodeld */,
-				BF630B9725D27C390095D459 /* Persistence.swift */,
-				BF630B9225D27C2D0095D459 /* Generated */,
-				BF630B9125D27C260095D459 /* Custom */,
+				BF630B9325D27C390095D459 /* SampleData.swift */,
+				BF630B9725D27C390095D459 /* DataController.swift */,
+				BF630B9125D27C260095D459 /* EntityExtensions */,
+				BF02B90B25DB0CB600725F4A /* DataModel.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		BF630B9125D27C260095D459 /* Custom */ = {
+		BF630B9125D27C260095D459 /* EntityExtensions */ = {
 			isa = PBXGroup;
 			children = (
 				BF630BE225D27D580095D459 /* AllAwakeExtensions.swift */,
 				BF630BF725D28A000095D459 /* CrewLine+Accessors.swift */,
 				BFCE9AED25D359E0001E723F /* CrewLine+Comparable.swift */,
-				BF630BE425D27D580095D459 /* Mission+Accessors.swift */,
-				BFFE3CD725D3B56000469EBA /* Mission+Calculations.swift */,
+				BF630BE425D27D580095D459 /* Event+Accessors.swift */,
+				BFFE3CD725D3B56000469EBA /* Event+Calculations.swift */,
 				BF630BDF25D27D580095D459 /* Person+Accessors.swift */,
 				BF630BE325D27D580095D459 /* Sortie+Accessors.swift */,
 				BF630BE125D27D580095D459 /* Sortie+Calculations.swift */,
 				BFCE9B0225D37348001E723F /* Sortie+Comparable.swift */,
 				BF630BE025D27D580095D459 /* SortieType+Accessors.swift */,
 			);
-			path = Custom;
+			path = EntityExtensions;
 			sourceTree = "<group>";
 		};
-		BF630B9225D27C2D0095D459 /* Generated */ = {
+		BFBE49C325DB49E800989673 /* UIExperiment */ = {
 			isa = PBXGroup;
 			children = (
-				BFF90E6A25D4B334000351E2 /* CrewLine+CoreDataClass.swift */,
-				BFF90E6B25D4B334000351E2 /* CrewLine+CoreDataProperties.swift */,
-				BF630C6025D293420095D459 /* EventRecord+CoreDataClass.swift */,
-				BF630C6125D293420095D459 /* EventRecord+CoreDataProperties.swift */,
-				BF630C6A25D293430095D459 /* FlightConditions+CoreDataClass.swift */,
-				BF630C6B25D293430095D459 /* FlightConditions+CoreDataProperties.swift */,
-				BF630C7225D293430095D459 /* FlightTime+CoreDataClass.swift */,
-				BF630C7325D293430095D459 /* FlightTime+CoreDataProperties.swift */,
-				BF630C6225D293420095D459 /* Fuel+CoreDataClass.swift */,
-				BF630C6325D293420095D459 /* Fuel+CoreDataProperties.swift */,
-				BF630C5E25D293420095D459 /* Metrics+CoreDataClass.swift */,
-				BF630C5F25D293420095D459 /* Metrics+CoreDataProperties.swift */,
-				BF630C6825D293430095D459 /* Mission+CoreDataClass.swift */,
-				BF630C6925D293430095D459 /* Mission+CoreDataProperties.swift */,
-				BF630C7025D293430095D459 /* MissionEventTypes+CoreDataClass.swift */,
-				BF630C7125D293430095D459 /* MissionEventTypes+CoreDataProperties.swift */,
-				BF630C6425D293420095D459 /* Person+CoreDataClass.swift */,
-				BF630C6525D293420095D459 /* Person+CoreDataProperties.swift */,
-				BFD8F29A25D5DAB40076F4BD /* Sortie+CoreDataClass.swift */,
-				BFD8F29B25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift */,
-				BF630C6E25D293430095D459 /* SortieType+CoreDataClass.swift */,
-				BF630C6F25D293430095D459 /* SortieType+CoreDataProperties.swift */,
+				BFBE49C425DB4A1400989673 /* ContentView2.swift */,
+				BFBE49C925DB5DEB00989673 /* EventSplitView.swift */,
 			);
-			path = Generated;
+			path = UIExperiment;
 			sourceTree = "<group>";
 		};
 		BFCE9AE425D3520A001E723F /* App */ = {
@@ -302,6 +327,7 @@
 				BF3A866025D1C9D700FD3DB9 /* LaunchScreen.storyboard */,
 				BF3A865225D1C9D500FD3DB9 /* AppDelegate.swift */,
 				BF3A865425D1C9D500FD3DB9 /* SceneDelegate.swift */,
+				BFB0371D25DB02D70005B5A0 /* TestDataUI.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -329,10 +355,11 @@
 		BFFE3CDC25D44FC400469EBA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BF3A865625D1C9D500FD3DB9 /* ContentView.swift */,
+				BFBE497E25DB1A4900989673 /* ContentView.swift */,
+				BF3A865625D1C9D500FD3DB9 /* EventsOverview.swift */,
 				BFCE9AD025D32393001E723F /* CrewLineView.swift */,
 				BFCE9AE825D3550C001E723F /* EventDownloaderView.swift */,
-				BFCE9AC625D31BCE001E723F /* MissionView.swift */,
+				BFCE9AC625D31BCE001E723F /* EventView.swift */,
 				BFCE9ADF25D348E3001E723F /* PBLModal.swift */,
 				BFCE9ACB25D31BD8001E723F /* SortieView.swift */,
 				BFB8F71325D45BC7003808A8 /* SplitTimeView.swift */,
@@ -344,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				BFCE9B0725D37794001E723F /* Date+Ext.swift */,
+				BFBE49BE25DB45D900989673 /* Binding+OnChange.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -478,57 +506,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBE49B325DB2CA300989673 /* FlightTime+CoreDataProperties.swift in Sources */,
+				BFBE49AF25DB2CA300989673 /* Event+CoreDataProperties.swift in Sources */,
+				BFBE49A625DB2CA300989673 /* CrewLine+CoreDataClass.swift in Sources */,
+				BFBE49AB25DB2CA300989673 /* Sortie+CoreDataProperties.swift in Sources */,
 				BFCE9ACC25D31BD8001E723F /* SortieView.swift in Sources */,
-				BF630C8925D293430095D459 /* FlightTime+CoreDataProperties.swift in Sources */,
+				BFBE497F25DB1A4900989673 /* ContentView.swift in Sources */,
+				BFBE49B025DB2CA300989673 /* MissionEventTypes+CoreDataClass.swift in Sources */,
+				BFBE49B525DB2CA300989673 /* EventRecord+CoreDataProperties.swift in Sources */,
 				BFB8F71425D45BC7003808A8 /* SplitTimeView.swift in Sources */,
-				BF630C7925D293430095D459 /* Fuel+CoreDataProperties.swift in Sources */,
-				BF630C8425D293430095D459 /* SortieType+CoreDataClass.swift in Sources */,
 				BF3A865325D1C9D500FD3DB9 /* AppDelegate.swift in Sources */,
+				BFBE49B425DB2CA300989673 /* EventRecord+CoreDataClass.swift in Sources */,
 				BFCE9B0825D37794001E723F /* Date+Ext.swift in Sources */,
 				BFCE9AD125D32394001E723F /* CrewLineView.swift in Sources */,
-				BF630C7425D293430095D459 /* Metrics+CoreDataClass.swift in Sources */,
-				BFCE9AC725D31BCE001E723F /* MissionView.swift in Sources */,
-				BF630C8025D293430095D459 /* FlightConditions+CoreDataClass.swift in Sources */,
-				BF630C8525D293430095D459 /* SortieType+CoreDataProperties.swift in Sources */,
+				BFBE49AA25DB2CA300989673 /* Sortie+CoreDataClass.swift in Sources */,
+				BFBE49A825DB2CA300989673 /* Fuel+CoreDataClass.swift in Sources */,
+				BFCE9AC725D31BCE001E723F /* EventView.swift in Sources */,
 				BF630BE725D27D580095D459 /* Sortie+Calculations.swift in Sources */,
-				BF630C7E25D293430095D459 /* Mission+CoreDataClass.swift in Sources */,
-				BF630C8725D293430095D459 /* MissionEventTypes+CoreDataProperties.swift in Sources */,
+				BFBE49B625DB2CA300989673 /* SortieType+CoreDataClass.swift in Sources */,
 				BFF90E7D25D4B64B000351E2 /* CoordinatedDatePicker.swift in Sources */,
-				BF630C7825D293430095D459 /* Fuel+CoreDataClass.swift in Sources */,
-				BF630B9825D27C390095D459 /* MockData.swift in Sources */,
+				BF630B9825D27C390095D459 /* SampleData.swift in Sources */,
 				BFCE9AE025D348E3001E723F /* PBLModal.swift in Sources */,
 				BF630BE825D27D580095D459 /* AllAwakeExtensions.swift in Sources */,
-				BF630C7525D293430095D459 /* Metrics+CoreDataProperties.swift in Sources */,
-				BF630C7F25D293430095D459 /* Mission+CoreDataProperties.swift in Sources */,
+				BFBE49B725DB2CA300989673 /* SortieType+CoreDataProperties.swift in Sources */,
 				BFCE9B0325D37348001E723F /* Sortie+Comparable.swift in Sources */,
-				BF630C8125D293430095D459 /* FlightConditions+CoreDataProperties.swift in Sources */,
+				BFBE49B125DB2CA300989673 /* MissionEventTypes+CoreDataProperties.swift in Sources */,
 				BF630BE525D27D580095D459 /* Person+Accessors.swift in Sources */,
-				BF630C7725D293430095D459 /* EventRecord+CoreDataProperties.swift in Sources */,
 				BF630BF825D28A000095D459 /* CrewLine+Accessors.swift in Sources */,
-				BFD8F29C25D5DAB40076F4BD /* Sortie+CoreDataClass.swift in Sources */,
 				BF630BE625D27D580095D459 /* SortieType+Accessors.swift in Sources */,
+				BFBE49A225DB2CA300989673 /* Person+CoreDataClass.swift in Sources */,
 				BFB8F71F25D4838A003808A8 /* PBSEventConverter.swift in Sources */,
+				BFBE49CA25DB5DEB00989673 /* EventSplitView.swift in Sources */,
 				BFF90E8825D4DE45000351E2 /* NilDatePicker.swift in Sources */,
-				BF630C7A25D293430095D459 /* Person+CoreDataClass.swift in Sources */,
 				BFB8F72425D48503003808A8 /* MockJSON.swift in Sources */,
+				BFBE49A525DB2CA300989673 /* Metrics+CoreDataProperties.swift in Sources */,
 				BFB8F73125D49C05003808A8 /* PersonCoder.swift in Sources */,
 				BF630BE925D27D580095D459 /* Sortie+Accessors.swift in Sources */,
-				BF630C7B25D293430095D459 /* Person+CoreDataProperties.swift in Sources */,
-				BF630C8825D293430095D459 /* FlightTime+CoreDataClass.swift in Sources */,
-				BFF90E6C25D4B334000351E2 /* CrewLine+CoreDataClass.swift in Sources */,
 				BFCE9AE925D3550C001E723F /* EventDownloaderView.swift in Sources */,
+				BFBE49A425DB2CA300989673 /* Metrics+CoreDataClass.swift in Sources */,
+				BFBE49AC25DB2CA300989673 /* FlightConditions+CoreDataClass.swift in Sources */,
+				BFBE49AE25DB2CA300989673 /* Event+CoreDataClass.swift in Sources */,
+				BFBE49A925DB2CA300989673 /* Fuel+CoreDataProperties.swift in Sources */,
 				BF3A865525D1C9D500FD3DB9 /* SceneDelegate.swift in Sources */,
-				BF630B9A25D27C390095D459 /* Persistence.swift in Sources */,
-				BF3A865725D1C9D500FD3DB9 /* ContentView.swift in Sources */,
-				BFFE3CD825D3B56000469EBA /* Mission+Calculations.swift in Sources */,
-				BF630BEA25D27D580095D459 /* Mission+Accessors.swift in Sources */,
+				BF630B9A25D27C390095D459 /* DataController.swift in Sources */,
+				BF3A865725D1C9D500FD3DB9 /* EventsOverview.swift in Sources */,
+				BFBE49C525DB4A1400989673 /* ContentView2.swift in Sources */,
+				BFFE3CD825D3B56000469EBA /* Event+Calculations.swift in Sources */,
+				BFBE49AD25DB2CA300989673 /* FlightConditions+CoreDataProperties.swift in Sources */,
+				BFBE49A725DB2CA300989673 /* CrewLine+CoreDataProperties.swift in Sources */,
+				BFB0371E25DB02D70005B5A0 /* TestDataUI.swift in Sources */,
+				BFBE49B225DB2CA300989673 /* FlightTime+CoreDataClass.swift in Sources */,
+				BFBE49BF25DB45D900989673 /* Binding+OnChange.swift in Sources */,
+				BF630BEA25D27D580095D459 /* Event+Accessors.swift in Sources */,
 				BFB8F72C25D4971E003808A8 /* EventCoder.swift in Sources */,
-				BF630C8625D293430095D459 /* MissionEventTypes+CoreDataClass.swift in Sources */,
-				BF630C4E25D291C60095D459 /* PBLogging.xcdatamodeld in Sources */,
-				BF630C7625D293430095D459 /* EventRecord+CoreDataClass.swift in Sources */,
+				BFBDF8A625DB1234004DB4AB /* DataModel.xcdatamodeld in Sources */,
 				BFCE9AEE25D359E0001E723F /* CrewLine+Comparable.swift in Sources */,
-				BFD8F29D25D5DAB40076F4BD /* Sortie+CoreDataProperties.swift in Sources */,
-				BFF90E6D25D4B334000351E2 /* CrewLine+CoreDataProperties.swift in Sources */,
+				BFBE49A325DB2CA300989673 /* Person+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF153D8325DB929400220150 /* EventTest.swift in Sources */,
 				BFCE9AF325D360EF001E723F /* CrewLineTests.swift in Sources */,
 				BFCE9AF825D36E0A001E723F /* SortieTests.swift in Sources */,
 				BF3A866D25D1C9D700FD3DB9 /* DataModelTests.swift in Sources */,
@@ -703,7 +737,7 @@
 				DEVELOPMENT_TEAM = 4W9F335W5Y;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DataModel/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,7 +745,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.glotech.DataModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -725,7 +759,7 @@
 				DEVELOPMENT_TEAM = 4W9F335W5Y;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = DataModel/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -733,7 +767,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.glotech.DataModel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
@@ -859,13 +893,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BF630C4C25D291C60095D459 /* PBLogging.xcdatamodeld */ = {
+		BF02B90B25DB0CB600725F4A /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BF630C4D25D291C60095D459 /* PBLogging.xcdatamodel */,
+				BF02B90C25DB0CB600725F4A /* DataModel.xcdatamodel */,
 			);
-			currentVersion = BF630C4D25D291C60095D459 /* PBLogging.xcdatamodel */;
-			path = PBLogging.xcdatamodeld;
+			currentVersion = BF02B90C25DB0CB600725F4A /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

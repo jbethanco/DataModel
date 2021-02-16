@@ -7,7 +7,7 @@
 
 import Foundation
  
-struct Event: Codable {
+struct PBSEvent: Codable {
     var eventType: Int
     var name, id: String
     var startTime: Date
@@ -30,9 +30,9 @@ struct Event: Codable {
     }
 }
  
-extension Event {
+extension PBSEvent {
     init(data: Data) throws {
-        self = try newJSONDecoder().decode(Event.self, from: data)
+        self = try newJSONDecoder().decode(PBSEvent.self, from: data)
     }
 
     init(_ json: String, using encoding: String.Encoding = .utf8) throws {
@@ -60,8 +60,8 @@ extension Event {
         updating: JSONNull?? = nil,
         organizationID: String? = nil,
         additionalValues: AdditionalValues? = nil
-    ) -> Event {
-        return Event(
+    ) -> PBSEvent {
+        return PBSEvent(
             eventType: eventType ?? self.eventType,
             name: name ?? self.name,
             id: id ?? self.id,
@@ -271,7 +271,7 @@ extension URLSession {
         }
     }
 
-    func welcomeTask(with url: URL, completionHandler: @escaping (Event?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
+    func welcomeTask(with url: URL, completionHandler: @escaping (PBSEvent?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return self.codableTask(with: url, completionHandler: completionHandler)
     }
 }

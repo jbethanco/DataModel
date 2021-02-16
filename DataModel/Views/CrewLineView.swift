@@ -20,8 +20,11 @@ struct CrewLineView: View {
     }
 }
 
-//struct CrewLineView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CrewLineView()
-//    }
-//}
+struct CrewLineView_Previews: PreviewProvider {
+    static var previews: some View {
+        let dataController = SampleData.previewDataController
+        CrewLineView(crewLine: SampleData.crewLine)
+            .environmentObject(dataController)
+            .environment(\.managedObjectContext, dataController.container.viewContext)
+    }
+}

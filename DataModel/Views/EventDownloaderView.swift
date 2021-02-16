@@ -10,6 +10,8 @@ import SwiftUI
 struct EventDownloaderView: View {
     
     @Binding var isShown: Bool
+    @Environment(\.managedObjectContext) private var viewContext
+    @EnvironmentObject var dataController: DataController
     
     var body: some View {
         VStack{
@@ -19,15 +21,15 @@ struct EventDownloaderView: View {
                 .padding()
             Text("It then downloads your squadrons events JSON.")
                 .padding()
-            Text("It then decodes those events into a mission\nwith Sorties and People.")
+            Text("It then decodes those PBS Events into PBLEvents\nwith Sorties and People.")
                 .padding()
             
             Button {
                  
-                let event = try! Event(MockJSON.pbsEvent)
-                PBSEventConverter.pblMissionFromEvent(event: event)
-                
-                print(event)
+                let pbsEvent = try! PBSEvent(MockJSON.pbsEvent)
+                PBSEventConverter.pblEventFromPBSEvent(pbsEvent: pbsEvent, context: viewContext)
+                dataController.save()
+                print(pbsEvent)
                 isShown = false 
                 
             } label: {
@@ -35,7 +37,7 @@ struct EventDownloaderView: View {
                     Color.gray
                         .frame(width: 500, height: 200)
                         .cornerRadius(10)
-                    Text("This is a sample mission\nTap to use it.")
+                    Text("This is a sample event\nTap to use it.")
                 }
             }
         }
@@ -44,6 +46,9 @@ struct EventDownloaderView: View {
 
 struct EventDownloaderView_Previews: PreviewProvider {
     static var previews: some View {
+        let dataController = SampleData.previewDataController
         EventDownloaderView(isShown: .constant(true))
+            .environmentObject(dataController)
+            .environment(\.managedObjectContext, dataController.container.viewContext)
     }
 }

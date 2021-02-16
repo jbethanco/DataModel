@@ -21,7 +21,7 @@ class CrewLineTests: XCTestCase {
     func testComparable() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-       let context =  PersistenceController.shared.container.viewContext
+       let context =  DataController().container.viewContext
         
         let leftWins = [("EP", "IP"), ("IP", "MP"), ("MP", "EL"), ("MP", "MP")]
         

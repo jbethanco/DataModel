@@ -9,17 +9,17 @@ import Foundation
 import CoreData
 
 struct PBSEventConverter {
-    static func pblMissionFromEvent(event: Event, context: NSManagedObjectContext = PersistenceController.shared.container.viewContext) {
+    static func pblEventFromPBSEvent(pbsEvent: PBSEvent, context: NSManagedObjectContext) {
         
-        let mission = Mission(context: context)
-        mission.name = event.name
+        let event = Event(context: context)
+        event.name = pbsEvent.name
         
         let sortie = Sortie(context: context)
-        sortie.mission = mission
-        sortie.takeoffTime = event.startTime
-        sortie.landTime = event.endTime
+        sortie.event = event
+        sortie.takeoffTime = pbsEvent.startTime
+        sortie.landTime = pbsEvent.endTime
          
-        for role in event.roleAssignments {
+        for role in pbsEvent.roleAssignments {
            let personID = role.personID
             // TODO: network call to query for the person
             if let personJson = MockJSON.pbsPersons[personID] {
@@ -51,7 +51,7 @@ struct PBSEventConverter {
              
         }
         
-        if !mission.sorties.isEmpty {
+        if !event.sorties.isEmpty {
            try! context.save()
         }
     }

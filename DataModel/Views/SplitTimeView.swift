@@ -27,7 +27,7 @@ struct SplitTimeView: View {
 
 struct SplitTimeView_Previews: PreviewProvider {
     static var previews: some View {
-        let sortie = MockData.sortie
+        let sortie = SampleData.sortie
         SplitTimeView(sortie: sortie)
     }
 }
