@@ -16,7 +16,7 @@ struct CrewLineView: View {
     var body: some View {
         VStack{
             Text(crewLine.flightAuthDutyCode + ": " + crewLine.person.firstName + " " + crewLine.person.lastName)
-        }
+        }.navigationBarTitle(crewLine.person.lastName)
     }
 }
 

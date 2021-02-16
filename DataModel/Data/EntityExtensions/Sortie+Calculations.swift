@@ -8,7 +8,15 @@
 import Foundation
 
 extension Sortie{
+  
+    // the sorties flight time as decimal hour string with one decimal place, returns "" if calculation returns nil
+    var flightTimeString: String {
+        guard let time = self.calculatedTotalFlightTimeFor781 else { return "" }
+        let string = String(format: "%.1f", time)
+        return string
+    }
     
+    // the sorties flight time as a decimal hour. Nil if missing date or begin date is beyond end date
     var calculatedTotalFlightTimeFor781: Double? {
        
         guard let start = takeoffTime   else { return nil }
@@ -16,27 +24,32 @@ extension Sortie{
         guard  end > start              else { return nil }
         
         return Sortie.timeBetweenDatesFor781(start: start, end: end)
-    
     }
     
-    var flightTimeString: String {
-        guard let time = self.calculatedTotalFlightTimeFor781 else { return "" }
-        let string = String(format: "%.1f", time)
-        return string
-    }
-    
+    /// Calculates the time between date/times in a way only used by the AFTO Form 781
+    /// - Parameters:
+    ///   - start: the start date/time
+    ///   - end: the end date/time
+    /// - Returns: the decimal hours from start to end.
     static func timeBetweenDatesFor781(start: Date, end: Date) -> Double {
         let interval = end.timeIntervalSince(start)
         let seconds = Int(interval)
         let hours = seconds / 3600
         let minutes = seconds % 3600 / 60
         
-        let tenths = tenthsOfAnHour(from:minutes)
+        let tenths = tenthsOfAnHour(fromMinutes:minutes)
         
         return Double(Double(hours) + tenths)
     }
     
-    static func tenthsOfAnHour(from minutes: Int) -> Double {
+    /// Converts a number of minutes to tenths of an hour.
+    ///
+    /// The logic in this function is directly taken from the Form 781. The Form 781 basically rounds up between 0 - 29 minutes and down for > 30 minutes.
+    ///
+    /// - Parameter minutes: The number of minutes between 0 and 59 to convert.
+    ///
+    /// - Returns: Tenths of an hour.
+    static func tenthsOfAnHour<B: BinaryInteger>(fromMinutes minutes: B) -> Double {
         switch minutes {
         case 0...2:     return 0.0
         case 3...8:     return 0.1

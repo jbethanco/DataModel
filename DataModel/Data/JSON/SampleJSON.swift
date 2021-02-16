@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum MockJSON{
+enum SampleJSON{
     static let pbsEventData = pbsEvent.data(using: .utf8)
     static let pbsEvent =
         """

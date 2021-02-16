@@ -44,6 +44,30 @@ class SortieTests: XCTestCase {
         XCTAssertEqual(time == 26.8, true)
     }
 
-    
+    func testTenthsOfAnHour() {
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 0), 0.0)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 1), 0.0)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 2), 0.0)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 3), 0.1)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 8), 0.1)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 9), 0.2)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 14), 0.2)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 15), 0.3)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 20), 0.3)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 21), 0.4)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 26), 0.4)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 27), 0.5)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 33), 0.5)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 34), 0.6)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 39), 0.6)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 40), 0.7)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 45), 0.7)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 46), 0.8)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 51), 0.8)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 52), 0.9)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 57), 0.9)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 58), 1.0)
+        XCTAssertEqual(Sortie.tenthsOfAnHour(fromMinutes: 59), 1.0)
+    }
 
 }

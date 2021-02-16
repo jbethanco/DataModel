@@ -11,12 +11,12 @@ import CoreData
 
 class EventTest: XCTestCase {
  
-    func testEventCreateAndDelete() throws {
+    func testEventAndSortieCreateAndDelete() throws {
         
         let dataController = DataController(inMemory: true)
         let context =  dataController.container.viewContext
         
-        // loads six events with 3 Sorties each
+        // loads 6 events with 3 Sorties each
         SampleData.loadMockData1(viewContext: context)
         
         let eventRequest = NSFetchRequest<Event>(entityName: "Event")
@@ -84,11 +84,13 @@ class EventTest: XCTestCase {
         
         XCTAssertEqual(events.count, 1, "There should be one event.")
         XCTAssertEqual(sorties.count, 0, "There should be no sorties.")
-        
-        let physicalDataController = DataController()
-        XCTAssertTrue(physicalDataController.container.persistentStoreDescriptions.first!.url!.absoluteString.contains("file"))
+   
+    }
+    
+    func testDiskDataControllerCreation(){
+        let diskDataController = DataController()
+        XCTAssertTrue(diskDataController.container.persistentStoreDescriptions.first!.url!.absoluteString.contains("file"))
     
     }
-
     
 }

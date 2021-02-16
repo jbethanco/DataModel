@@ -30,17 +30,12 @@ struct EventSplitView: View {
                             }
                         }
                     }
-                  
-                    
                 }
-                
             }
             .background(Color.gray)
             .cornerRadius(20)
             .padding([.leading,.trailing])
             .padding(.top)
-            
-            
             Spacer()
             detailView.frame(width: 444)
             Spacer()
@@ -73,18 +68,3 @@ struct RoundedSection: ViewModifier {
             .cornerRadius(10)
     }
 }
-
-
-//struct SectionView: View {
-//
-//    var body: some View = {
-//        VStack {
-//            ForEach {
-//                Text("asdf")
-//            }
-//        }
-//        .background(Color.white)
-//        .cornerRadius(10)
-//        .padding()
-//    }
-//}

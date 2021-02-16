@@ -22,7 +22,7 @@ struct PBSEventConverter {
         for role in pbsEvent.roleAssignments {
            let personID = role.personID
             // TODO: network call to query for the person
-            if let personJson = MockJSON.pbsPersons[personID] {
+            if let personJson = SampleJSON.pbsPersons[personID] {
                 let pbsPerson = try! PBSPerson(personJson)
                 print(pbsPerson)
                 

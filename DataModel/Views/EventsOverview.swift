@@ -77,6 +77,7 @@ struct EventsOverview: View {
         Button{
             withAnimation{
                 self.showNewMissionFormModal = true
+                
             }
         } label: {
             Image(systemName: "plus")
@@ -128,14 +129,14 @@ struct AddNewMissionFormView: View {
                     }.disabled( eventName.isEmpty || eventSummary.isEmpty )
                 }.padding()
              
-        }.frame(width:500, height: 200)
+        }
+        .frame(width:500, height: 200)
         .overlay(RoundedRectangle(cornerRadius: 10)
         .stroke(Color.secondary, lineWidth: 2))
         
     }
     func addEvent(){
-        
-        
+         
         let event = Event(context: viewContext)
         event.name = eventName
         event.summary = eventSummary

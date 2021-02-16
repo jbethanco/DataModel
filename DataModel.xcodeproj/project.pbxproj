@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF153D8325DB929400220150 /* EventTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF153D8225DB929400220150 /* EventTest.swift */; };
+		BF153D8825DB9F3100220150 /* ModalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF153D8725DB9F3100220150 /* ModalProvider.swift */; };
 		BF3A865325D1C9D500FD3DB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A865225D1C9D500FD3DB9 /* AppDelegate.swift */; };
 		BF3A865525D1C9D500FD3DB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A865425D1C9D500FD3DB9 /* SceneDelegate.swift */; };
 		BF3A865725D1C9D500FD3DB9 /* EventsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3A865625D1C9D500FD3DB9 /* EventsOverview.swift */; };
@@ -28,7 +29,7 @@
 		BFB0371E25DB02D70005B5A0 /* TestDataUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB0371D25DB02D70005B5A0 /* TestDataUI.swift */; };
 		BFB8F71425D45BC7003808A8 /* SplitTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F71325D45BC7003808A8 /* SplitTimeView.swift */; };
 		BFB8F71F25D4838A003808A8 /* PBSEventConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F71E25D4838A003808A8 /* PBSEventConverter.swift */; };
-		BFB8F72425D48503003808A8 /* MockJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F72325D48503003808A8 /* MockJSON.swift */; };
+		BFB8F72425D48503003808A8 /* SampleJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F72325D48503003808A8 /* SampleJSON.swift */; };
 		BFB8F72C25D4971E003808A8 /* EventCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F72B25D4971E003808A8 /* EventCoder.swift */; };
 		BFB8F73125D49C05003808A8 /* PersonCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB8F73025D49C05003808A8 /* PersonCoder.swift */; };
 		BFBDF8A625DB1234004DB4AB /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF02B90B25DB0CB600725F4A /* DataModel.xcdatamodeld */; };
@@ -93,6 +94,7 @@
 /* Begin PBXFileReference section */
 		BF02B90C25DB0CB600725F4A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		BF153D8225DB929400220150 /* EventTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTest.swift; sourceTree = "<group>"; };
+		BF153D8725DB9F3100220150 /* ModalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalProvider.swift; sourceTree = "<group>"; };
 		BF3A864F25D1C9D500FD3DB9 /* DataModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3A865225D1C9D500FD3DB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF3A865425D1C9D500FD3DB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +121,7 @@
 		BFB0371D25DB02D70005B5A0 /* TestDataUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataUI.swift; sourceTree = "<group>"; };
 		BFB8F71325D45BC7003808A8 /* SplitTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitTimeView.swift; sourceTree = "<group>"; };
 		BFB8F71E25D4838A003808A8 /* PBSEventConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBSEventConverter.swift; sourceTree = "<group>"; };
-		BFB8F72325D48503003808A8 /* MockJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJSON.swift; sourceTree = "<group>"; };
+		BFB8F72325D48503003808A8 /* SampleJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleJSON.swift; sourceTree = "<group>"; };
 		BFB8F72B25D4971E003808A8 /* EventCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCoder.swift; sourceTree = "<group>"; };
 		BFB8F73025D49C05003808A8 /* PersonCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCoder.swift; sourceTree = "<group>"; };
 		BFBE497E25DB1A4900989673 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,15 @@
 			path = GeneratedToPreventFalseErrors;
 			sourceTree = "<group>";
 		};
+		BF153D8C25DB9FD700220150 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				BF153D8725DB9F3100220150 /* ModalProvider.swift */,
+				BFCE9ADF25D348E3001E723F /* PBLModal.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		BF3A864625D1C9D500FD3DB9 = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +257,7 @@
 				BF630B9025D27C180095D459 /* Data */,
 				BFFE3CDD25D44FD800469EBA /* Extensions */,
 				BFBE49C325DB49E800989673 /* UIExperiment */,
+				BF153D8C25DB9FD700220150 /* Modal */,
 				BFFE3CDC25D44FC400469EBA /* Views */,
 				BF3A865D25D1C9D700FD3DB9 /* Preview Content */,
 				BF3A865B25D1C9D700FD3DB9 /* Assets.xcassets */,
@@ -338,7 +350,7 @@
 				BFB8F71E25D4838A003808A8 /* PBSEventConverter.swift */,
 				BFB8F73025D49C05003808A8 /* PersonCoder.swift */,
 				BFB8F72B25D4971E003808A8 /* EventCoder.swift */,
-				BFB8F72325D48503003808A8 /* MockJSON.swift */,
+				BFB8F72325D48503003808A8 /* SampleJSON.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -360,7 +372,6 @@
 				BFCE9AD025D32393001E723F /* CrewLineView.swift */,
 				BFCE9AE825D3550C001E723F /* EventDownloaderView.swift */,
 				BFCE9AC625D31BCE001E723F /* EventView.swift */,
-				BFCE9ADF25D348E3001E723F /* PBLModal.swift */,
 				BFCE9ACB25D31BD8001E723F /* SortieView.swift */,
 				BFB8F71325D45BC7003808A8 /* SplitTimeView.swift */,
 			);
@@ -538,8 +549,9 @@
 				BFB8F71F25D4838A003808A8 /* PBSEventConverter.swift in Sources */,
 				BFBE49CA25DB5DEB00989673 /* EventSplitView.swift in Sources */,
 				BFF90E8825D4DE45000351E2 /* NilDatePicker.swift in Sources */,
-				BFB8F72425D48503003808A8 /* MockJSON.swift in Sources */,
+				BFB8F72425D48503003808A8 /* SampleJSON.swift in Sources */,
 				BFBE49A525DB2CA300989673 /* Metrics+CoreDataProperties.swift in Sources */,
+				BF153D8825DB9F3100220150 /* ModalProvider.swift in Sources */,
 				BFB8F73125D49C05003808A8 /* PersonCoder.swift in Sources */,
 				BF630BE925D27D580095D459 /* Sortie+Accessors.swift in Sources */,
 				BFCE9AE925D3550C001E723F /* EventDownloaderView.swift in Sources */,

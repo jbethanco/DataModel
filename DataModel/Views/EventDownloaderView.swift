@@ -26,7 +26,7 @@ struct EventDownloaderView: View {
             
             Button {
                  
-                let pbsEvent = try! PBSEvent(MockJSON.pbsEvent)
+                let pbsEvent = try! PBSEvent(SampleJSON.pbsEvent)
                 PBSEventConverter.pblEventFromPBSEvent(pbsEvent: pbsEvent, context: viewContext)
                 dataController.save()
                 print(pbsEvent)
