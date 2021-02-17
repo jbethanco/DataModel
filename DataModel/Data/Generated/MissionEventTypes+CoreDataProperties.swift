@@ -2,12 +2,13 @@
 //  MissionEventTypes+CoreDataProperties.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/15/21.
+//  Created by John Bethancourt on 2/16/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension MissionEventTypes {
 
@@ -27,10 +28,10 @@ extension MissionEventTypes {
 extension MissionEventTypes {
 
     @objc(addEventsObject:)
-    @NSManaged public func addToEvents(_ value: EventRecord)
+    @NSManaged public func addToEvents(_ value: MissionEventRecord)
 
     @objc(removeEventsObject:)
-    @NSManaged public func removeFromEvents(_ value: EventRecord)
+    @NSManaged public func removeFromEvents(_ value: MissionEventRecord)
 
     @objc(addEvents:)
     @NSManaged public func addToEvents(_ values: NSSet)
@@ -40,6 +41,6 @@ extension MissionEventTypes {
 
 }
 
-extension MissionEventTypes: Identifiable {
+extension MissionEventTypes : Identifiable {
 
 }

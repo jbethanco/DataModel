@@ -5,7 +5,7 @@
         <attribute name="flyingOrganization_" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="reserveStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="events_" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EventRecord" inverseName="crewLine" inverseEntity="EventRecord"/>
+        <relationship name="events_" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MissionEventRecord" inverseName="crewLine" inverseEntity="MissionEventRecord"/>
         <relationship name="flightConditions_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FlightConditions" inverseName="crewLine" inverseEntity="FlightConditions"/>
         <relationship name="flightTime_" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FlightTime" inverseName="crewLine" inverseEntity="FlightTime"/>
         <relationship name="person_" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="crewLines" inverseEntity="Person"/>
@@ -16,12 +16,6 @@
         <attribute name="name_" optional="YES" attributeType="String"/>
         <attribute name="summary_" optional="YES" attributeType="String"/>
         <relationship name="sorties_" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Sortie" inverseName="event" inverseEntity="Sortie"/>
-    </entity>
-    <entity name="EventRecord" representedClassName="EventRecord" syncable="YES">
-        <attribute name="asInstructor" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="numberAccomplished" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="crewLine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CrewLine" inverseName="events_" inverseEntity="CrewLine"/>
-        <relationship name="eventType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MissionEventTypes" inverseName="events" inverseEntity="MissionEventTypes"/>
     </entity>
     <entity name="FlightConditions" representedClassName="FlightConditions" syncable="YES">
         <attribute name="combatSupportTime" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -58,12 +52,18 @@
         <attribute name="numRollingStock" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <relationship name="sortie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sortie" inverseName="metrics" inverseEntity="Sortie"/>
     </entity>
+    <entity name="MissionEventRecord" representedClassName="MissionEventRecord" syncable="YES">
+        <attribute name="asInstructor" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="numberAccomplished" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="crewLine" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CrewLine" inverseName="events_" inverseEntity="CrewLine"/>
+        <relationship name="eventType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MissionEventTypes" inverseName="events" inverseEntity="MissionEventTypes"/>
+    </entity>
     <entity name="MissionEventTypes" representedClassName="MissionEventTypes" syncable="YES">
         <attribute name="eventID" optional="YES" attributeType="String"/>
         <attribute name="frequency" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventRecord" inverseName="eventType" inverseEntity="EventRecord"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MissionEventRecord" inverseName="eventType" inverseEntity="MissionEventRecord"/>
     </entity>
     <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="branch" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -118,16 +118,16 @@
         <relationship name="sortie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sortie" inverseName="sortieType" inverseEntity="Sortie"/>
     </entity>
     <elements>
-        <element name="CrewLine" positionX="-320.46484375" positionY="-296.37109375" width="128" height="178"/>
-        <element name="Event" positionX="160" positionY="192" width="128" height="89"/>
-        <element name="EventRecord" positionX="-139.05078125" positionY="-338.96875" width="128" height="89"/>
-        <element name="FlightConditions" positionX="-88.96484375" positionY="-220.03515625" width="128" height="134"/>
-        <element name="FlightTime" positionX="-110.95703125" positionY="-42.1640625" width="128" height="134"/>
-        <element name="Fuel" positionX="-319.17578125" positionY="-106.953125" width="128" height="89"/>
-        <element name="Metrics" positionX="-321.7890625" positionY="8.86328125" width="128" height="164"/>
-        <element name="MissionEventTypes" positionX="33.12890625" positionY="-353.85546875" width="128" height="104"/>
-        <element name="Person" positionX="-137.01953125" positionY="128.109375" width="128" height="164"/>
-        <element name="Sortie" positionX="-495.23828125" positionY="-332.03515625" width="128" height="373"/>
-        <element name="SortieType" positionX="-660.81640625" positionY="-168.41015625" width="128" height="254"/>
+        <element name="CrewLine" positionX="-40.4375" positionY="-9325.49609375" width="128" height="178"/>
+        <element name="Event" positionX="-378.48046875" positionY="-9072.640625" width="128" height="103"/>
+        <element name="MissionEventRecord" positionX="117.41796875" positionY="-9365.11328125" width="128" height="103"/>
+        <element name="FlightConditions" positionX="445.9375" positionY="-9340.71875" width="128" height="148"/>
+        <element name="FlightTime" positionX="505.4609375" positionY="-9082.05078125" width="128" height="148"/>
+        <element name="Fuel" positionX="-19.8671875" positionY="-9111.8125" width="128" height="103"/>
+        <element name="Metrics" positionX="304.26171875" positionY="-8895.375" width="128" height="178"/>
+        <element name="MissionEventTypes" positionX="287.49609375" positionY="-9352.8515625" width="128" height="118"/>
+        <element name="Person" positionX="153.2890625" positionY="-9046.4296875" width="128" height="178"/>
+        <element name="Sortie" positionX="-214.20703125" positionY="-9297.6953125" width="128" height="373"/>
+        <element name="SortieType" positionX="-41.05859375" positionY="-8932.14453125" width="128" height="268"/>
     </elements>
 </model>

@@ -2,12 +2,13 @@
 //  FlightConditions+CoreDataProperties.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/15/21.
+//  Created by John Bethancourt on 2/16/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension FlightConditions {
 
@@ -25,6 +26,6 @@ extension FlightConditions {
 
 }
 
-extension FlightConditions: Identifiable {
+extension FlightConditions : Identifiable {
 
 }

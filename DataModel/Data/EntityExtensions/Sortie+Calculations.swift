@@ -23,7 +23,7 @@ extension Sortie {
         guard let end = landTime        else { return nil }
         guard  end > start              else { return nil }
 
-        return Sortie.timeBetweenDatesFor781(start: start, end: end)
+        return timeBetweenDatesFor781(start: start, end: end)
     }
 
     /// Calculates the time between date/times in a way only used by the AFTO Form 781
@@ -31,7 +31,7 @@ extension Sortie {
     ///   - start: the start date/time
     ///   - end: the end date/time
     /// - Returns: the decimal hours from start to end.
-    static func timeBetweenDatesFor781(start: Date, end: Date) -> Double {
+    private func timeBetweenDatesFor781(start: Date, end: Date) -> Double {
         let interval = end.timeIntervalSince(start)
         let seconds = Int(interval)
         let hours = seconds / 3600
@@ -42,14 +42,19 @@ extension Sortie {
         return Double(Double(hours) + tenths)
     }
 
-    /// Converts a number of minutes to tenths of an hour.
+    /// Converts a number of minutes to tenths of an hour as defined by the AFTO Form 781.
     ///
-    /// The logic in this function is directly taken from the Form 781. The Form 781 basically rounds up between 0 - 29 minutes and down for > 30 minutes.
+    /// It returns equivalent of:
+    ///
+    ///  `return n < 30 ? round(Double(n)/6.0) / 10.0 : round(Double(n)/6.1) / 10.0`
+    ///
+    /// The table version below matches the one on the form. It reads nicer
+    /// and will be easier to update if ever needed.
     ///
     /// - Parameter minutes: The number of minutes between 0 and 59 to convert.
     ///
     /// - Returns: Tenths of an hour.
-    static func tenthsOfAnHour<B: BinaryInteger>(fromMinutes minutes: B) -> Double {
+    private func tenthsOfAnHour<B: BinaryInteger>(fromMinutes minutes: B) -> Double {
         switch minutes {
         case 0...2:     return 0.0
         case 3...8:     return 0.1
@@ -61,8 +66,7 @@ extension Sortie {
         case 40...45:   return 0.7
         case 46...51:   return 0.8
         case 52...57:   return 0.9
-        default:
-                        return 1.0
+        default:        return 1.0
         }
     }
 }

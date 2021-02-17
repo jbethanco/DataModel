@@ -2,7 +2,7 @@
 //  FlightConditions+CoreDataClass.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/15/21.
+//  Created by John Bethancourt on 2/16/21.
 //
 //
 

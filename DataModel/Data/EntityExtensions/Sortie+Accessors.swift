@@ -42,10 +42,12 @@ extension Sortie {
         get { return specialUse_ ?? "" }
         set { specialUse_ = newValue }
     }
+
     public var harmLocation: String {
         get { return harmLocation_ ?? "" }
         set { harmLocation_ = newValue }
     }
+
     public var unitCharged: String {
         get { return unitCharged_ ?? "" }
         set { unitCharged_ = newValue }

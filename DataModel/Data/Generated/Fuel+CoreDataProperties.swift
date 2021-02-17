@@ -2,12 +2,13 @@
 //  Fuel+CoreDataProperties.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/15/21.
+//  Created by John Bethancourt on 2/16/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension Fuel {
 
@@ -22,6 +23,6 @@ extension Fuel {
 
 }
 
-extension Fuel: Identifiable {
+extension Fuel : Identifiable {
 
 }

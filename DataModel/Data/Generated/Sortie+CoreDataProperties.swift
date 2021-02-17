@@ -2,12 +2,13 @@
 //  Sortie+CoreDataProperties.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/15/21.
+//  Created by John Bethancourt on 2/16/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension Sortie {
 
@@ -57,6 +58,6 @@ extension Sortie {
 
 }
 
-extension Sortie: Identifiable {
+extension Sortie : Identifiable {
 
 }

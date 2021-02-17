@@ -2,12 +2,13 @@
 //  CrewLine+CoreDataProperties.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/15/21.
+//  Created by John Bethancourt on 2/16/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension CrewLine {
 
@@ -31,10 +32,10 @@ extension CrewLine {
 extension CrewLine {
 
     @objc(addEvents_Object:)
-    @NSManaged public func addToEvents_(_ value: EventRecord)
+    @NSManaged public func addToEvents_(_ value: MissionEventRecord)
 
     @objc(removeEvents_Object:)
-    @NSManaged public func removeFromEvents_(_ value: EventRecord)
+    @NSManaged public func removeFromEvents_(_ value: MissionEventRecord)
 
     @objc(addEvents_:)
     @NSManaged public func addToEvents_(_ values: NSSet)
@@ -44,6 +45,6 @@ extension CrewLine {
 
 }
 
-extension CrewLine: Identifiable {
+extension CrewLine : Identifiable {
 
 }

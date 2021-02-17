@@ -3,18 +3,15 @@
 //  DataModel
 //
 //  Created by John Bethancourt on 2/8/21.
-////
 //
 
-////    @NSManaged public var events: NSSet?
-////    @NSManaged public var flightConditions: FlightConditions?
-////    @NSManaged public var flightTime: FlightTime?
-
 extension CrewLine {
+
     public var flightAuthDutyCode: String {
         get { return flightAuthDutyCode_ ?? "" }
         set { flightAuthDutyCode_ = newValue }
     }
+
     public var flightTime: FlightTime {
         get {
             if flightTime_ == nil {
@@ -27,6 +24,7 @@ extension CrewLine {
         }
         set { flightTime_ = newValue }
     }
+
     public var person: Person {
         get {
             if person_ == nil {
@@ -38,6 +36,7 @@ extension CrewLine {
         }
         set { person_ = newValue }
     }
+
     public var flyingOrganization: String {
         get { return flyingOrganization_ ?? "" }
         set { flyingOrganization_ = newValue }

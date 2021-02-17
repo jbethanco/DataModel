@@ -2,12 +2,13 @@
 //  Person+CoreDataProperties.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/15/21.
+//  Created by John Bethancourt on 2/16/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension Person {
 
@@ -44,6 +45,6 @@ extension Person {
 
 }
 
-extension Person: Identifiable {
+extension Person : Identifiable {
 
 }

@@ -15,7 +15,7 @@ extension Person {
         person.last4 = self.last4
         return person
     }
-    
+
     public var lastName: String {
         get { return lastName_ ?? "" }
         set { lastName_ = newValue }

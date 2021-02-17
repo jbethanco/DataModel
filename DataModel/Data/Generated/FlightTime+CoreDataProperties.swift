@@ -2,12 +2,13 @@
 //  FlightTime+CoreDataProperties.swift
 //  DataModel
 //
-//  Created by John Bethancourt on 2/15/21.
+//  Created by John Bethancourt on 2/16/21.
 //
 //
 
 import Foundation
 import CoreData
+
 
 extension FlightTime {
 
@@ -25,6 +26,6 @@ extension FlightTime {
 
 }
 
-extension FlightTime: Identifiable {
+extension FlightTime : Identifiable {
 
 }

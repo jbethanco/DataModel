@@ -29,14 +29,17 @@ class EventTest: XCTestCase {
         XCTAssertEqual(sorties.count, events.count * 3, "Wrong amount of Sorties were created.")
 
         // Delete one event
-        dataController.delete(events.first!)
+       
+        let eventA = try XCTUnwrap(events.first, "expected eventA")
+        dataController.delete(eventA)
         context.undo()
 
         // The delete should not occur as it was not saved and the context was undone
         XCTAssertEqual(events.count, 6, "Wrong amount of Events were created.")
         XCTAssertEqual(sorties.count, events.count * 3, "Wrong amount of Sorties were created.")
 
-        dataController.delete(events.first!)
+        let eventB = try XCTUnwrap(events.first, "expected eventB")
+        dataController.delete(eventB)
         dataController.save()
         context.undo()
 
@@ -48,8 +51,9 @@ class EventTest: XCTestCase {
 
         // cascade delete of the event should delete teh associated sorties.
         XCTAssertEqual(sorties.count, events.count * 3, "Wrong amount of Sorties remaining.")
-
-        dataController.delete(events.first!)
+        
+        let eventC = try XCTUnwrap(events.first, "expected eventC")
+        dataController.delete(eventC)
         events = try context.fetch(eventRequest)
         sorties = try context.fetch(sortieRequest)
 
@@ -58,7 +62,8 @@ class EventTest: XCTestCase {
         // cascade delete of the event should delete the associated sorties.
         XCTAssertEqual(sorties.count, events.count * 3, "Wrong amount of Sorties remaining.")
 
-        dataController.delete(sorties.first!)
+        let sortieA = try XCTUnwrap(sorties.first, "expected sortieA")
+        dataController.delete(sortieA)
         dataController.save()
 
         events = try context.fetch(eventRequest)
@@ -76,7 +81,20 @@ class EventTest: XCTestCase {
         XCTAssertEqual(events.count, 0, "There should be no events.")
         XCTAssertEqual(sorties.count, 0, "There should be no events.")
 
+    }
+    
+    func testSoloCreation() throws {
+        
+        let dataController = DataController(inMemory: true)
+        let context =  dataController.container.viewContext
+        
         _ = Event(context: context)
+        
+        let eventRequest = NSFetchRequest<Event>(entityName: "Event")
+        var events = try context.fetch(eventRequest)
+
+        let sortieRequest = NSFetchRequest<Sortie>(entityName: "Sortie")
+        var sorties = try context.fetch(sortieRequest)
 
         events = try context.fetch(eventRequest)
         sorties = try context.fetch(sortieRequest)
@@ -86,10 +104,12 @@ class EventTest: XCTestCase {
 
     }
 
-    func testDiskDataControllerCreation() {
+    func testDiskDataControllerCreation() throws {
         let diskDataController = DataController()
-        XCTAssertTrue(diskDataController.container.persistentStoreDescriptions.first!.url!.absoluteString.contains("file"))
-
+        let descriptions = diskDataController.container.persistentStoreDescriptions
+        let first = try XCTUnwrap(descriptions.first, "expected description")
+        let url = try XCTUnwrap(first.url, "expected url")
+        XCTAssertTrue( url.absoluteString.contains("file"))
     }
 
 }
