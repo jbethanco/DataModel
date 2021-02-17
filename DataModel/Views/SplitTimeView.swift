@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct SplitTimeView: View {
-    
+
     @ObservedObject var sortie: Sortie
-    
+
     var body: some View {
-        List{
-            ForEach(sortie.crewLines){ crewLine in
-                HStack{
+        List {
+            ForEach(sortie.crewLines) { crewLine in
+                HStack {
                      Text(crewLine.flightAuthDutyCode)
                     Text(crewLine.person.lastName)
                     Text("\(crewLine.flightTime.instructor)")
                 }
-                 
+
             }
         }.navigationBarTitle("Split Time")
     }

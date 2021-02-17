@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension CrewLine {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CrewLine> {
@@ -45,6 +44,6 @@ extension CrewLine {
 
 }
 
-extension CrewLine : Identifiable {
+extension CrewLine: Identifiable {
 
 }

@@ -8,55 +8,55 @@
 import SwiftUI
 
 struct SortieView: View {
-    
+
     @Environment(\.managedObjectContext) private var viewContext
-    
+
     @ObservedObject var sortie: Sortie
-     
+
     var body: some View {
-        VStack{
+        VStack {
             HStack {
                 TextField("MDS", text: $sortie.mds)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding([.leading,.trailing])
+                    .padding([.leading, .trailing])
                 TextField("Serial", text: $sortie.serialNumber)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding([.leading,.trailing])
+                    .padding([.leading, .trailing])
 
             }
-            HStack{
+            HStack {
                 TextField("HARM Location", text: $sortie.harmLocation)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding([.leading,.trailing])
+                    .padding([.leading, .trailing])
 
                 TextField("Unit Charged", text: $sortie.unitCharged)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding([.leading,.trailing])
+                    .padding([.leading, .trailing])
 
             }
-            HStack{
-                
+            HStack {
+
                 TextField("Takeoff ICAO", text: $sortie.takeoffICAO)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.leading)
-  
+
                 NilDatePicker(date: $sortie.takeoffTime)
-                
+
                 TextField("Landing ICAO", text: $sortie.landICAO)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                
+
                 NilDatePicker(date: $sortie.landTime)
-                
+
                 Text("Total: \(sortie.flightTimeString)")
                     .padding(.trailing)
             }
-            List{
-                ForEach(sortie.crewLines){ crewLine in
+            List {
+                ForEach(sortie.crewLines) { crewLine in
                     NavigationLink(destination: CrewLineView(crewLine: crewLine)) {
-                        HStack{
+                        HStack {
                             Text(crewLine.flightAuthDutyCode)
                                 .frame(width: 100)
-                            VStack(alignment:.leading) {
+                            VStack(alignment: .leading) {
                                 Text("\(crewLine.person.firstName)")
                                 Text("\(crewLine.person.lastName)")
                             }
@@ -64,20 +64,20 @@ struct SortieView: View {
                     }
                 }
             }
-            NavigationLink(destination: SplitTimeView(sortie:sortie)) {
+            NavigationLink(destination: SplitTimeView(sortie: sortie)) {
                 Text("Do the time splitting")
             }
         }
         .navigationBarTitle("\(sortie.takeoffICAO) to \(sortie.landICAO)")
-        .onDisappear(){
+        .onDisappear {
             try! viewContext.save()
         }
-   
+
      }
 }
 
-//struct SortieView_Previews: PreviewProvider {
+// struct SortieView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        //SortieView()
 //    }
-//}
+// }

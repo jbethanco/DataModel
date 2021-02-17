@@ -6,11 +6,10 @@
 
 import Foundation
 extension SortieType {
-    
+
     public var sortieDelayRemarks: String {
         get { return sortieDelayRemarks_ ?? "" }
         set { sortieDelayRemarks_ = newValue }
     }
 
 }
-

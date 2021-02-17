@@ -9,17 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack{
-            VStack{
+        VStack {
+            VStack {
                 Text("Top Bar")
-                    .frame(maxWidth:.infinity)
-                    .frame(height:40)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 40)
                 Text("Shake Device for fake data generation. (Or Command+Ctrl+Z in simulator.)")
                     .font(.caption)
                     .padding(.bottom, 2)
             }
             .background(Color.purple)
-           
+
             EventsOverview()
         }.modalProvider()
     }

@@ -11,18 +11,18 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    
+
     @ObservedObject var dataController: DataController
-    
-    override init(){
+
+    override init() {
         let controller = DataController()
         _dataController = ObservedObject(wrappedValue: controller)
     }
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
+
         let contentView = ContentView()
-        
+
             .environment(\.managedObjectContext, dataController.container.viewContext)
             .environmentObject(dataController)
 
@@ -62,9 +62,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
 
         // Save changes in the application's managed object context when the application transitions to the background.
-         
+
     }
 
-
 }
-

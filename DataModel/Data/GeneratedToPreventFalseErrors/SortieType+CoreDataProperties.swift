@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension SortieType {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<SortieType> {
@@ -34,6 +33,6 @@ extension SortieType {
 
 }
 
-extension SortieType : Identifiable {
+extension SortieType: Identifiable {
 
 }

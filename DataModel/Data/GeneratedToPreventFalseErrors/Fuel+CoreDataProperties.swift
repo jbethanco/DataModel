@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Fuel {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Fuel> {
@@ -23,6 +22,6 @@ extension Fuel {
 
 }
 
-extension Fuel : Identifiable {
+extension Fuel: Identifiable {
 
 }

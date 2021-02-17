@@ -15,26 +15,26 @@ struct TestDataUI: View {
         entity: Event.entity(),
         sortDescriptors: []
     )
- 
+
     private var events: FetchedResults<Event>
-    
+
     var body: some View {
-        VStack{
+        VStack {
             Text("HELLO")
             Text(events.first!.name)
         }
-       
+
     }
 }
 
 struct TestDataUI_Previews: PreviewProvider {
-     
+
     static var previews: some View {
-        
+
         let dataController = SampleData.previewDataController
          TestDataUI()
             .environmentObject(dataController)
             .environment(\.managedObjectContext, dataController.container.viewContext)
-        
+
     }
 }

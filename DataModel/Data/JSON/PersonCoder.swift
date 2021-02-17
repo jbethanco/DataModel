@@ -4,9 +4,9 @@
 //
 //  Created by John Bethancourt on 2/10/21.
 //
- 
+
 import Foundation
- 
+
 struct PBSPerson: Codable {
     var id: String
     var roleAssignments: JSONNull?
@@ -73,9 +73,7 @@ extension PBSPerson {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
- 
- 
- 
+
 extension URLSession {
     fileprivate func codableTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return self.dataTask(with: url) { data, response, error in
@@ -92,4 +90,3 @@ extension URLSession {
     }
 }
 
- 

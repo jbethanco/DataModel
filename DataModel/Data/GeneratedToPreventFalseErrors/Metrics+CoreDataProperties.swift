@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Metrics {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Metrics> {
@@ -28,6 +27,6 @@ extension Metrics {
 
 }
 
-extension Metrics : Identifiable {
+extension Metrics: Identifiable {
 
 }

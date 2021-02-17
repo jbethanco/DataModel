@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct EventDownloaderView: View {
-    
+
     @Binding var isShown: Bool
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var dataController: DataController
-    
+
     var body: some View {
-        VStack{
+        VStack {
             Text("DOWNLOADING EVENTS")
                 .padding()
             Text("This is where you login to P1 SSO.")
@@ -23,15 +23,15 @@ struct EventDownloaderView: View {
                 .padding()
             Text("It then decodes those PBS Events into PBLEvents\nwith Sorties and People.")
                 .padding()
-            
+
             Button {
-                 
+
                 let pbsEvent = try! PBSEvent(SampleJSON.pbsEvent)
                 PBSEventConverter.pblEventFromPBSEvent(pbsEvent: pbsEvent, context: viewContext)
                 dataController.save()
                 print(pbsEvent)
-                isShown = false 
-                
+                isShown = false
+
             } label: {
                 ZStack {
                     Color.gray

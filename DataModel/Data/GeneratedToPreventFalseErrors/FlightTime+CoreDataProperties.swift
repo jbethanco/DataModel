@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension FlightTime {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<FlightTime> {
@@ -26,6 +25,6 @@ extension FlightTime {
 
 }
 
-extension FlightTime : Identifiable {
+extension FlightTime: Identifiable {
 
 }

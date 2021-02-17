@@ -22,10 +22,10 @@ class CrewLineTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
        let context =  DataController().container.viewContext
-        
+
         let leftWins = [("EP", "IP"), ("IP", "MP"), ("MP", "EL"), ("MP", "MP")]
-        
-        for pair in leftWins{
+
+        for pair in leftWins {
             let lhs = CrewLine(context: context)
             let rhs = CrewLine(context: context)
             let lperson = Person(context: context)
@@ -36,17 +36,15 @@ class CrewLineTests: XCTestCase {
             lhs.person.lastName = "Alpha"
             rhs.person.firstName = "Alpha"
             rhs.person.lastName = "Zulu"
-            
+
             print(rhs.person.lastName)
-            
+
             lhs.flightAuthDutyCode = pair.0
             rhs.flightAuthDutyCode = pair.1
-            NSLog ( lhs.flightAuthDutyCode + " - " + rhs.flightAuthDutyCode)
-            
+            NSLog( lhs.flightAuthDutyCode + " - " + rhs.flightAuthDutyCode)
+
             XCTAssertTrue(lhs <= rhs)
         }
     }
-
-  
 
 }

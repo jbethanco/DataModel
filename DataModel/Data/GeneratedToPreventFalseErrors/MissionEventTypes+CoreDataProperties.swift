@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension MissionEventTypes {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<MissionEventTypes> {
@@ -41,6 +40,6 @@ extension MissionEventTypes {
 
 }
 
-extension MissionEventTypes : Identifiable {
+extension MissionEventTypes: Identifiable {
 
 }

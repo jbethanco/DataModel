@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension Sortie {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Sortie> {
@@ -58,6 +57,6 @@ extension Sortie {
 
 }
 
-extension Sortie : Identifiable {
+extension Sortie: Identifiable {
 
 }

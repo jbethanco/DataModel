@@ -9,19 +9,19 @@ import SwiftUI
 
 struct EventSplitView: View {
     @ObservedObject var event: Event
-    @State var selected: Int? = nil
-    
+    @State var selected: Int?
+
     var body: some View {
         HStack {
-            VStack{
-                Form{
-                    Section(header: Text("Sorties")){
-                        List{
+            VStack {
+                Form {
+                    Section(header: Text("Sorties")) {
+                        List {
                             ForEach(event.sorties) { sortie in
-                                Button{
-                                    
+                                Button {
+
                                 } label: {
-                                    HStack{
+                                    HStack {
                                         Image(systemName: "airplane")
                                         Text(sortie.takeoffICAO)
                                         Text(sortie.landICAO)
@@ -34,16 +34,16 @@ struct EventSplitView: View {
             }
             .background(Color.gray)
             .cornerRadius(20)
-            .padding([.leading,.trailing])
+            .padding([.leading, .trailing])
             .padding(.top)
             Spacer()
             detailView.frame(width: 444)
             Spacer()
         }
         .navigationBarTitle(event.name)
-        
+
     }
-    
+
     @ViewBuilder var detailView: some View {
         if selected == nil {
             Text("Select An Item")
@@ -51,7 +51,7 @@ struct EventSplitView: View {
             Text("\(selected!) is selected")
         }
     }
-    
+
     var highlightColor: some View {
         Color.accentColor
             .opacity(0.8)
@@ -60,7 +60,6 @@ struct EventSplitView: View {
             .frame(minWidth: 150, maxWidth: 200)
     }
 }
-
 
 struct RoundedSection: ViewModifier {
     func body(content: Content) -> some View {

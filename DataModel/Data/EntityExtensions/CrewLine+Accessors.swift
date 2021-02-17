@@ -5,11 +5,11 @@
 //  Created by John Bethancourt on 2/8/21.
 ////
 //
- 
+
 ////    @NSManaged public var events: NSSet?
 ////    @NSManaged public var flightConditions: FlightConditions?
 ////    @NSManaged public var flightTime: FlightTime?
-  
+
 extension CrewLine {
     public var flightAuthDutyCode: String {
         get { return flightAuthDutyCode_ ?? "" }

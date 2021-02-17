@@ -7,25 +7,25 @@
 
 import Foundation
 
-extension Sortie{
-  
+extension Sortie {
+
     // the sorties flight time as decimal hour string with one decimal place, returns "" if calculation returns nil
     var flightTimeString: String {
         guard let time = self.calculatedTotalFlightTimeFor781 else { return "" }
         let string = String(format: "%.1f", time)
         return string
     }
-    
+
     // the sorties flight time as a decimal hour. Nil if missing date or begin date is beyond end date
     var calculatedTotalFlightTimeFor781: Double? {
-       
+
         guard let start = takeoffTime   else { return nil }
         guard let end = landTime        else { return nil }
         guard  end > start              else { return nil }
-        
+
         return Sortie.timeBetweenDatesFor781(start: start, end: end)
     }
-    
+
     /// Calculates the time between date/times in a way only used by the AFTO Form 781
     /// - Parameters:
     ///   - start: the start date/time
@@ -36,12 +36,12 @@ extension Sortie{
         let seconds = Int(interval)
         let hours = seconds / 3600
         let minutes = seconds % 3600 / 60
-        
-        let tenths = tenthsOfAnHour(fromMinutes:minutes)
-        
+
+        let tenths = tenthsOfAnHour(fromMinutes: minutes)
+
         return Double(Double(hours) + tenths)
     }
-    
+
     /// Converts a number of minutes to tenths of an hour.
     ///
     /// The logic in this function is directly taken from the Form 781. The Form 781 basically rounds up between 0 - 29 minutes and down for > 30 minutes.

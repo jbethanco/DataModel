@@ -1,4 +1,4 @@
- //
+//
  //  EventCoder.swift
  //  DataModel
  //
@@ -6,7 +6,7 @@
  //
 
 import Foundation
- 
+
 struct PBSEvent: Codable {
     var eventType: Int
     var name, id: String
@@ -29,7 +29,7 @@ struct PBSEvent: Codable {
         case additionalValues
     }
 }
- 
+
 extension PBSEvent {
     init(data: Data) throws {
         self = try newJSONDecoder().decode(PBSEvent.self, from: data)
@@ -86,10 +86,9 @@ extension PBSEvent {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
- 
+
 struct AdditionalValues: Codable {
 }
- 
 
 extension AdditionalValues {
     init(data: Data) throws {
@@ -121,7 +120,7 @@ extension AdditionalValues {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
- 
+
 struct RoleAssignment: Codable {
     var personID, eventID, id: String
     var index: Int
@@ -135,7 +134,7 @@ struct RoleAssignment: Codable {
         case id, index, confirmationStatus, jobRole, notes
     }
 }
- 
+
 extension RoleAssignment {
     init(data: Data) throws {
         self = try newJSONDecoder().decode(RoleAssignment.self, from: data)
@@ -180,7 +179,7 @@ extension RoleAssignment {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
- 
+
 struct JobRole: Codable {
     var roleType, roleName: String
     var id: Int
@@ -194,7 +193,7 @@ struct JobRole: Codable {
         case active, abbreviation
     }
 }
- 
+
 extension JobRole {
     init(data: Data) throws {
         self = try newJSONDecoder().decode(JobRole.self, from: data)
@@ -237,15 +236,14 @@ extension JobRole {
         return String(data: try self.jsonData(), encoding: encoding)
     }
 }
- 
- 
+
 func newJSONDecoder() -> JSONDecoder {
     let decoder = JSONDecoder()
     if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm'Z'"
         decoder.dateDecodingStrategy = .formatted(formatter)
-        
+
     }
     return decoder
 }
@@ -254,11 +252,10 @@ func newJSONEncoder() -> JSONEncoder {
     let encoder = JSONEncoder()
     if #available(iOS 10.0, OSX 10.12, tvOS 10.0, watchOS 3.0, *) {
          encoder.dateEncodingStrategy = .iso8601
-        
+
     }
     return encoder
 }
- 
 
 extension URLSession {
     fileprivate func codableTask<T: Codable>(with url: URL, completionHandler: @escaping (T?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
@@ -275,7 +272,7 @@ extension URLSession {
         return self.codableTask(with: url, completionHandler: completionHandler)
     }
 }
- 
+
 class JSONNull: Codable, Hashable {
 
     public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {

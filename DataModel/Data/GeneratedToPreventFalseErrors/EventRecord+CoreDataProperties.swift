@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-
 extension EventRecord {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<EventRecord> {
@@ -23,6 +22,6 @@ extension EventRecord {
 
 }
 
-extension EventRecord : Identifiable {
+extension EventRecord: Identifiable {
 
 }

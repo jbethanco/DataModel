@@ -6,13 +6,12 @@
 //
 
 extension Sortie: Comparable {
-    
+
     public static func < (lhs: Sortie, rhs: Sortie) -> Bool {
-        //nil should sort to last
+        // nil should sort to last
         guard let lTime = lhs.takeoffTime else { return false }
         guard let rTime = rhs.takeoffTime else { return true  }
         return lTime < rTime
     }
-    
-    
+
 }

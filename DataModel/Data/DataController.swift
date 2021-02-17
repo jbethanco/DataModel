@@ -5,19 +5,19 @@
 import CoreData
 
 class DataController: ObservableObject {
-    
+
     let container: NSPersistentContainer
 
     init(inMemory: Bool = false) {
-       
+
         container = NSPersistentContainer(name: "DataModel")
-        
+
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
-        
-        container.loadPersistentStores { storeDescription, error in
-             
+
+        container.loadPersistentStores { _, error in
+
             if let error = error {
                 fatalError("Fatal error loading store: \(error.localizedDescription)")
                // AlertProvider.shared.showAlertWithTitle(title: "Load Persistent Store Error", message: "\(error), \(error.userInfo). Please screenshot and send to the dev team.")
@@ -25,10 +25,10 @@ class DataController: ObservableObject {
             }
         }
     }
-  
+
     func save() {
         guard container.viewContext.hasChanges else { return }
-        
+
         do {
             try container.viewContext.save()
         } catch {
@@ -38,13 +38,13 @@ class DataController: ObservableObject {
             // AlertProvider.shared.showAlertWithTitle(title: "Context Save Error", message: "\(nsError), \(nsError.userInfo). Please screenshot and send to the dev team.")
         }
     }
-    
+
     func delete(_ object: NSManagedObject) {
         container.viewContext.delete(object)
     }
-    
+
     func deleteAllEvents() {
-         
+
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Event.fetchRequest()
         let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         do {
@@ -52,8 +52,7 @@ class DataController: ObservableObject {
         } catch {
             fatalError("Failed to delete stuff")
         }
-        
+
     }
-    
-    
+
 }

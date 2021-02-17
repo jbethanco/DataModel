@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CrewLineView: View {
-    
+
     @Environment(\.managedObjectContext) private var viewContext
 
     @ObservedObject var crewLine: CrewLine
-    
+
     var body: some View {
-        VStack{
+        VStack {
             Text(crewLine.flightAuthDutyCode + ": " + crewLine.person.firstName + " " + crewLine.person.lastName)
         }.navigationBarTitle(crewLine.person.lastName)
     }
